@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class PlayerInputManager : MonoBehaviour
+{
+    public TMP_InputField nameInputField;
+    public GameObject playerInputPanel;
+
+    //Stores the name, hides input panel, triggers opening scene
+    public void OnSubmitName()
+    {
+        PlayerData.playerName = nameInputField.text;
+        playerInputPanel.SetActive(false);
+        ShowOpeningScene();
+    }
+
+    private void ShowOpeningScene()
+    {
+        //TBD
+    }
+}

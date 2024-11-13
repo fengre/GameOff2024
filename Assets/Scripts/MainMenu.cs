@@ -7,10 +7,6 @@ public class MainMenu : MonoBehaviour
     public GameObject settingsPanel;
     public GameObject creditsPanel;
 
-    public void PlayGame()
-    {
-        //Scene loading and management tbd
-    }
 
     public void OpenSettings()
     {

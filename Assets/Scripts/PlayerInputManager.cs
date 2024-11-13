@@ -8,6 +8,7 @@ public class PlayerInputManager : MonoBehaviour
 {
     public TMP_InputField nameInputField;
     public GameObject playerInputPanel;
+    public GameObject gamePanel;
 
     //Stores the name, hides input panel, triggers opening scene
     public void OnSubmitName()
@@ -19,6 +20,7 @@ public class PlayerInputManager : MonoBehaviour
 
     private void ShowOpeningScene()
     {
+        gamePanel.SetActive(true);
         //TBD
     }
 }

@@ -3,28 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
-public class DescriptionPanel : MonoBehaviour
+public class ItemPickupUI : MonoBehaviour
 {
+    [SerializeField] private GameObject itemPickupUIPanel;
     [SerializeField] private TextMeshProUGUI itemNameText;
-    [SerializeField] private TextMeshProUGUI itemDescriptionText;
     [SerializeField] private Image itemImage;
+    [SerializeField] private Button collectButton;
     [SerializeField] private Button viewButton;
     [SerializeField] private SecretUI secretUI;
 
-    private void Start()
+    private void Awake()
     {
-        Hide();   
+        collectButton.onClick.AddListener(Hide);
+        Hide();
+    }
+
+    private void Hide()
+    {
+        itemPickupUIPanel.SetActive(false);
     }
 
     public void ShowPanel(Item item)
     {
         itemNameText.text = item.itemName;
-        itemDescriptionText.text = item.description;
         itemImage.sprite = item.itemIcon;
-        this.gameObject.SetActive(true);
-
+        itemPickupUIPanel.SetActive(true);
+        
         if (item is Secret)
         {
             Secret secret = item as Secret;
@@ -35,12 +40,6 @@ public class DescriptionPanel : MonoBehaviour
         {
             viewButton.gameObject.SetActive(false);
         }
-        
-    }
-
-    public void Hide()
-    {
-        this.gameObject.SetActive(false);
     }
 
     public void ShowMemory(Sprite secretImage)

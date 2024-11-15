@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ItemPickupUIPanel : MonoBehaviour
+public class SecretPickupUI : MonoBehaviour
 {
+    [SerializeField] private GameObject secretPickupUIPanel;
     [SerializeField] private TextMeshProUGUI itemNameText;
     [SerializeField] private Image itemImage;
     [SerializeField] private Button collectButton;
@@ -18,13 +19,13 @@ public class ItemPickupUIPanel : MonoBehaviour
 
     private void Hide()
     {
-        this.gameObject.SetActive(false);
+        secretPickupUIPanel.SetActive(false);
     }
 
     public void ShowPanel(Item item)
     {
         itemNameText.text = item.itemName;
         itemImage.sprite = item.itemIcon;
-        this.gameObject.SetActive(true);
+        secretPickupUIPanel.SetActive(true);
     }
 }

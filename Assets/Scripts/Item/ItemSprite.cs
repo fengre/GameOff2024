@@ -1,12 +1,12 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class ItemPickup : MonoBehaviour
+public class ItemSprite : MonoBehaviour, IClickable
 {
     [SerializeField] private Item item; // Reference to the item that this object represents
-    [SerializeField] private ItemPickupUIPanel itemPickupUIPanel;
+    [SerializeField] private ItemPickupUI itemPickupUI;
 
-    private void OnMouseDown()
+    public void OnClick()
     {
         Inventory.Instance.AddItem(item);
         ShowPanel();
@@ -15,6 +15,6 @@ public class ItemPickup : MonoBehaviour
 
     private void ShowPanel()
     {
-        itemPickupUIPanel.ShowPanel(item);
+        itemPickupUI.ShowPanel(item);
     }
 }

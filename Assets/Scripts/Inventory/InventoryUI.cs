@@ -4,12 +4,16 @@ using UnityEngine.UI;
 public class InventoryUI : MonoBehaviour
 {
     public InventorySlot[] inventorySlots; // UI slots
-    public GameObject inventoryPanel; // The UI panel to hold the inventory
+    public GameObject inventoryUIPanel; // The UI panel to hold the inventory
     public DescriptionPanel descriptionPanel; // The UI panel to hold the inventory
+    [SerializeField] private Button inventoryButton;
+    [SerializeField] private Button closeButton;
 
-    void Awake()
+    private void Awake()
     {
-        inventoryPanel.SetActive(false);
+        inventoryUIPanel.SetActive(false);
+        inventoryButton.onClick.AddListener(ShowPanel);
+        closeButton.onClick.AddListener(HidePanel);
     }
 
     private void Start()
@@ -45,14 +49,14 @@ public class InventoryUI : MonoBehaviour
         descriptionPanel.ShowPanel(item);
     }
 
-    public void ToggleInventory()
+    private void ShowPanel()
     {
-        // Toggle inventory UI visibility
-        if (inventoryPanel.activeSelf) {
-            descriptionPanel.Hide();
-        }
-        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+        inventoryUIPanel.SetActive(true);
         UpdateInventoryUI();
-        
+    }
+
+    private void HidePanel()
+    {
+        inventoryUIPanel.SetActive(false);
     }
 }

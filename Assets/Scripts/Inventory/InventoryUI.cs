@@ -52,7 +52,14 @@ public class InventoryUI : MonoBehaviour
     private void ShowPanel()
     {
         inventoryUIPanel.SetActive(true);
+        ResetPanel();
         UpdateInventoryUI();
+    }
+
+    private void ResetPanel()
+    {
+        // TODO: other sorts of resetting
+        descriptionPanel.Hide();
     }
 
     private void HidePanel()

@@ -15,6 +15,7 @@ public class DescriptionPanel : MonoBehaviour
 
     private void Start()
     {
+        viewButton.gameObject.SetActive(false);
         Hide();   
     }
 

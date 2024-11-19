@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.loop = true;
         audioSource.playOnAwake = false;
-        audioSource.volume = 0.5f;
+        audioSource.volume = 1.0f;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -89,6 +89,11 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.volume = Mathf.Clamp01(volume);
         }
+    }
+
+    public float GetVolume()
+    {
+        return audioSource != null ? audioSource.volume : 0f;
     }
 
 }

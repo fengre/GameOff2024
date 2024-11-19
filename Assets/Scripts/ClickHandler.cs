@@ -19,7 +19,7 @@ public class ClickHandler : MonoBehaviour
             if (hits.Length > 0)
             {
                 // Sort the hits by distance from the camera to get the topmost object
-                System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+                System.Array.Sort(hits, CompareBySortingOrder);
 
                 // Get the topmost hit that has an IClickable component
                 foreach (RaycastHit2D hit in hits)
@@ -33,5 +33,27 @@ public class ClickHandler : MonoBehaviour
                 }
             }
         }
+    }
+
+    private int CompareBySortingOrder(RaycastHit2D hit1, RaycastHit2D hit2)
+    {
+        // Get the SpriteRenderer component for each hit
+        SpriteRenderer sprite1 = hit1.collider.GetComponent<SpriteRenderer>();
+        if (sprite1 == null)
+        {
+            sprite1 = hit1.collider.GetComponentInChildren<SpriteRenderer>();
+        }
+        SpriteRenderer sprite2 = hit2.collider.GetComponent<SpriteRenderer>();
+        if (sprite2 == null)
+        {
+            sprite2 = hit1.collider.GetComponentInChildren<SpriteRenderer>();
+        }
+
+        // If either sprite is missing, consider it lower in order (optional fallback)
+        if (sprite1 == null || sprite2 == null)
+            return 0;
+
+        // Compare by sortingOrder (higher sortingOrder is on top)
+        return sprite2.sortingOrder.CompareTo(sprite1.sortingOrder);
     }
 }

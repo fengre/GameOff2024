@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3213ed949058a0d47826c5f3bd819e6d, type: 3}
+  m_Name: Init
+  m_EditorClassIdentifier: 
+  m_dataPerPlatformList:
+  - WwisePlatform: Web
+    LocalizedBankKeys:
+    - SFX
+    LocalizedBanksValues:
+    - m_AssetGUID: 2045bf27438c547e3b7a0bf9919f2145
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaValues:
+      localizedMediaList: []
+  - WwisePlatform: Windows
+    LocalizedBankKeys:
+    - SFX
+    LocalizedBanksValues:
+    - m_AssetGUID: 69e935efb039441938d7244b98155eae
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaValues:
+      localizedMediaList: []
+  currentPlatformAssets:
+    WwisePlatform: 
+    LocalizedBankKeys: []
+    LocalizedBanksValues: []
+    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaValues:
+      localizedMediaList: []

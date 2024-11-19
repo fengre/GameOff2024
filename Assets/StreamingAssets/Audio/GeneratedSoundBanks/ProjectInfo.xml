@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="The Village" GUID="{A7CD2F62-673A-466C-8A47-255E0D74CBEB}" Generator="2023.1.5.8522"/>
+	<CacheRoot>../../../../../../WwiseProjects/The Village/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Web" GUID="{760C75F8-1800-4D1B-8A38-4DD9D6A34ADD}" BasePlatform="Web" BasePlatformGUID="{639AD233-23F2-4C0F-9127-79F44C15E1DA}" Path="../../../WwiseData/Banks/Web"/>
+		<Platform Name="Windows" GUID="{C2376513-1E12-4D86-91A6-4B5B0C96F94A}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../WwiseData/Banks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{5D5D3055-4924-4860-A3A0-1D6DC66B387D}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{AAC338DB-13DA-D576-EE9F-1E12CBD7D892}</FileHash>
+</ProjectInfo>

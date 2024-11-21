@@ -10,12 +10,22 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Button viewButton;
     [SerializeField] private Button closeButton;
 
+    private Material blurMaterial;
+
     private void Awake()
     {
         inventoryUIPanel.SetActive(false);
         viewButton.gameObject.SetActive(false);
         inventoryButton.onClick.AddListener(ShowPanel);
         closeButton.onClick.AddListener(HidePanel);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            HidePanel();
+        }
     }
 
     private void Start()

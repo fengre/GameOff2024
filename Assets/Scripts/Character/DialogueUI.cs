@@ -9,13 +9,20 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private GameObject dialogueUIPanel;
     [SerializeField] private TextMeshProUGUI characterNameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private Button closeButton;
     [SerializeField] private Button nextButton;
     [SerializeField] private ItemPickupUI itemPickupUI;
 
     private void Awake()
     {
-        closeButton.onClick.AddListener(Hide);
+        closeButton.onClick.AddListener(() => {
+            bool displayLine = dialogueManager.DisplayNextLine();
+            if (!displayLine)
+            {
+                Hide();
+            }
+        });
         SetButtons(true);
         Hide();
     }
@@ -28,13 +35,18 @@ public class DialogueUI : MonoBehaviour
     public void ShowPanel(Character character, bool hasReceivedItem, bool firstShow)
     {
         characterNameText.text = character.characterName;
-        dialogueText.text = character.GetDialogue(hasReceivedItem);
+        dialogueManager.StartDialogue(character.GetDialogue(hasReceivedItem));
         if (hasReceivedItem && firstShow)
         {
             SetButtons(false);
             nextButton.onClick.AddListener(() => {
-                Hide();
-                itemPickupUI.ShowPanel(character.secret);
+                bool displayLine = dialogueManager.DisplayNextLine();
+                if (!displayLine)
+                {
+                    Hide();
+                    itemPickupUI.ShowPanel(character.secret);
+                }
+                
             });
         }
         else

@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Mom
   m_EditorClassIdentifier: 
   characterName: Mom
-  initialDialogue: How I miss my baby. I would give anything for something to remind
-    me of them...
   desiredItem: {fileID: 11400000, guid: ad7a46ae70a05c24186c33d4baf31b47, type: 2}
-  postItemDialogue: You brought my baby's blanket! This is bringing back so many
-    memories...
   secret: {fileID: 11400000, guid: f59935eda3a84354b81a3558c7d8ed4f, type: 2}
+  initialDialogue:
+  - How I miss my baby.
+  - I would give anything for something to remind me of them...
+  postItemDialogue:
+  - You brought my baby's blanket!
+  - This is bringing back so many memories...

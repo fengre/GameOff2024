@@ -14,17 +14,30 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private Button nextButton;
     [SerializeField] private ItemPickupUI itemPickupUI;
 
+    private Character currCharacter;
+
     private void Awake()
     {
         closeButton.onClick.AddListener(() => {
-            bool displayLine = dialogueManager.DisplayNextLine();
-            if (!displayLine)
-            {
-                Hide();
-            }
+            NextDialogue(false);
         });
         SetButtons(true);
         Hide();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (closeButton.gameObject.activeSelf)
+            {
+                NextDialogue(false);
+            }
+            else if (nextButton.gameObject.activeSelf)
+            {
+                NextDialogue(true);
+            }
+        }
     }
 
     private void Hide()
@@ -34,19 +47,14 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowPanel(Character character, bool hasReceivedItem, bool firstShow)
     {
+        currCharacter = character;
         characterNameText.text = character.characterName;
         dialogueManager.StartDialogue(character.GetDialogue(hasReceivedItem));
         if (hasReceivedItem && firstShow)
         {
             SetButtons(false);
             nextButton.onClick.AddListener(() => {
-                bool displayLine = dialogueManager.DisplayNextLine();
-                if (!displayLine)
-                {
-                    Hide();
-                    itemPickupUI.ShowPanel(character.secret);
-                }
-                
+                NextDialogue(true);
             });
         }
         else
@@ -60,5 +68,18 @@ public class DialogueUI : MonoBehaviour
     {
         closeButton.gameObject.SetActive(close);
         nextButton.gameObject.SetActive(!close);
+    }
+
+    private void NextDialogue(bool showItemPickup)
+    {
+        bool displayLine = dialogueManager.DisplayNextLine();
+        if (!displayLine)
+        {
+            Hide();
+            if (showItemPickup)
+            {
+                itemPickupUI.ShowPanel(currCharacter.secret);
+            }
+        }
     }
 }

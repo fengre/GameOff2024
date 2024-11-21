@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class DialogueManager : MonoBehaviour
 {
+    public event EventHandler EndDialogueEvent;
+
     public TextMeshProUGUI dialogueText;
     public AudioClip typingSound; // Sound effect for typing
     public float typingSpeed = 0.05f; // Speed of typing
@@ -99,5 +102,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         dialogueText.text = ""; // Clear text or trigger another action
+        EndDialogueEvent?.Invoke(this, EventArgs.Empty);
+        Debug.Log("End Dialogue");
     }
 }

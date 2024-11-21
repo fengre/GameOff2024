@@ -24,11 +24,22 @@ public class ClickHandler : MonoBehaviour
                 // Get the topmost hit that has an IClickable component
                 foreach (RaycastHit2D hit in hits)
                 {
+                    CharacterSprite character = hit.collider.GetComponent<CharacterSprite>();
+                    if (character != null)
+                    {
+                        IClickable clickable = hit.collider.GetComponent<IClickable>();
+                        clickable.OnClick();
+                        return; // Stop after the first topmost clickable object
+                    }
+                }
+
+                foreach (RaycastHit2D hit in hits)
+                {
                     IClickable clickable = hit.collider.GetComponent<IClickable>();
                     if (clickable != null)
                     {
                         clickable.OnClick();
-                        break; // Stop after the first topmost clickable object
+                        return; // Stop after the first topmost clickable object
                     }
                 }
             }

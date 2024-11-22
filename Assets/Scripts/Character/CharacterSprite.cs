@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class ChracterSprite : MonoBehaviour, IClickable
+public class CharacterSprite : MonoBehaviour, IClickable
 {
     public Character character;  // Assign the Character asset in the Inspector
     public DialogueUI dialogueUI;
@@ -33,3 +33,4 @@ public class ChracterSprite : MonoBehaviour, IClickable
         Inventory.Instance.AddItem(character.secret);
     }
 }
+

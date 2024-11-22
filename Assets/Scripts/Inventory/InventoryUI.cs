@@ -7,13 +7,25 @@ public class InventoryUI : MonoBehaviour
     public GameObject inventoryUIPanel; // The UI panel to hold the inventory
     public DescriptionPanel descriptionPanel; // The UI panel to hold the inventory
     [SerializeField] private Button inventoryButton;
+    [SerializeField] private Button viewButton;
     [SerializeField] private Button closeButton;
+
+    private Material blurMaterial;
 
     private void Awake()
     {
         inventoryUIPanel.SetActive(false);
+        viewButton.gameObject.SetActive(false);
         inventoryButton.onClick.AddListener(ShowPanel);
         closeButton.onClick.AddListener(HidePanel);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            HidePanel();
+        }
     }
 
     private void Start()

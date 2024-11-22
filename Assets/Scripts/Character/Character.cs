@@ -4,19 +4,19 @@ using UnityEngine;
 public class Character : ScriptableObject
 {
     public string characterName;
-
-    [TextArea(3,10)]
-    public string initialDialogue;
-
+    public Sprite idleImage;
+    public Sprite speakingImage;
     public Item desiredItem;
-
-    [TextArea(3,10)]
-    public string postItemDialogue;
-
     public Secret secret;
 
+    [TextArea(1,10)]
+    public string[] initialDialogue;    
+
+    [TextArea(1,10)]
+    public string[] postItemDialogue;
+
     // Method to get dialogue based on whether the item has been received
-    public string GetDialogue(bool hasReceivedItem)
+    public string[] GetDialogue(bool hasReceivedItem)
     {
         return hasReceivedItem ? postItemDialogue : initialDialogue;
     }

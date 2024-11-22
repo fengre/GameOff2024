@@ -24,14 +24,20 @@ public class SceneManagement : MonoBehaviour
     public void PlayGame()
     {
         ResetGameState();
-        SceneManager.LoadScene("OpeningScene");
+        SceneManager.LoadScene("VillageSquare");
     }
 
-    public void EndGame()
+    public void LoadSceneByName(string sceneName)
     {
-        SceneManager.LoadScene("EndScene");
+        if (Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+        else
+        {
+            Debug.LogError("Scene cannot be found in the build settings.");
+        }
     }
-
     //Reset PlayerData & return to MainMenu
     public void ResetGameState()
     {

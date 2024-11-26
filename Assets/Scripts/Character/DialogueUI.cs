@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class DialogueUI : MonoBehaviour
 {
+    public event EventHandler EndDialogueEvent;
+
     [SerializeField] private GameObject dialogueUIPanel;
     [SerializeField] private TextMeshProUGUI characterNameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -80,6 +83,7 @@ public class DialogueUI : MonoBehaviour
             {
                 itemPickupUI.ShowPanel(currCharacter.secret);
             }
+            EndDialogueEvent?.Invoke(this, EventArgs.Empty);
         }
     }
 }

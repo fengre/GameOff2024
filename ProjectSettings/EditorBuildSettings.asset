@@ -9,31 +9,52 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: dea9724c760c03f4e8dadada745a0488
   - enabled: 1
-    path: Assets/Scenes/VillageSquare.unity
+    path: Assets/Scenes/PastScenes/VillageSquare2.unity
     guid: b6d49011e472b3e4f8760612316debbe
   - enabled: 1
-    path: Assets/Scenes/Farm.unity
+    path: Assets/Scenes/PastScenes/Farm.unity
     guid: d32c2a3f12773ca45aa4552aa51674b4
   - enabled: 1
-    path: Assets/Scenes/Tree.unity
+    path: Assets/Scenes/PastScenes/Tree2.unity
     guid: ea6b08ab19f836b41815ba043ee712c5
   - enabled: 1
-    path: Assets/Scenes/ClanLeader.unity
+    path: Assets/Scenes/PastScenes/ClanLeader.unity
     guid: bb96a0b8daef2494ea98d563697af726
   - enabled: 1
-    path: Assets/Scenes/House.unity
+    path: Assets/Scenes/PastScenes/House.unity
     guid: adad7414bd639264a8ec0c73823069db
   - enabled: 1
-    path: Assets/Scenes/River.unity
+    path: Assets/Scenes/PastScenes/River2.unity
     guid: 3686cf953b071b544a14d76e0b2bf8e9
   - enabled: 1
-    path: Assets/Scenes/Fisherman.unity
+    path: Assets/Scenes/PastScenes/Fisherman.unity
     guid: f28c78dc2c350f84c9198b16ecdd3025
   - enabled: 1
-    path: Assets/Scenes/EndScene.unity
+    path: Assets/Scenes/PastScenes/EndScene2.unity
     guid: 7f6b976e8a7b2204d8842179431fbcd9
   - enabled: 1
-    path: Assets/Scenes/River2.unity
+    path: Assets/Scenes/River.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/FamilyHouse.unity
+    guid: 8dedb4f703cb6174bb130c4e063e975b
+  - enabled: 1
+    path: Assets/Scenes/VillageSquare.unity
+    guid: 9a12263fe3aaabc468c1235e6c0d3dd4
+  - enabled: 1
+    path: Assets/Scenes/ClanLeaderHouse.unity
+    guid: bdb4e9bdba22e264688bbc2755df02c9
+  - enabled: 1
+    path: Assets/Scenes/FarmHouse.unity
+    guid: bc1f2013746396545bd69e3ee8dbe8bd
+  - enabled: 1
+    path: Assets/Scenes/Lake.unity
+    guid: 4af93b1a284affd43a0683f77853de58
+  - enabled: 1
+    path: Assets/Scenes/Tree.unity
+    guid: 7e9cf611eba9b764c8538e63858628eb
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 261af47d1e6d259458bd681ab951d000
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 5150059301afd4cd5b4a63ce1a70a38e, type: 2}

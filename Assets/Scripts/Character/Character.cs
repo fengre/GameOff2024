@@ -6,6 +6,8 @@ public class Character : ScriptableObject
     public string characterName;
     public Sprite idleImage;
     public Sprite speakingImage;
+    public Sprite itemReceivedIdleImage;
+    public Sprite itemReceivedSpeakingImage;
     public Item desiredItem;
     public Secret secret;
 

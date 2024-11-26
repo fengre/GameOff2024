@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class DialogueManager : MonoBehaviour
 {
-    public event EventHandler EndDialogueEvent;
-
     public TextMeshProUGUI dialogueText;
     public AudioClip typingSound; // Sound effect for typing
     public float typingSpeed = 0.05f; // Speed of typing
@@ -39,6 +36,7 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueQueue.Enqueue(line);
         }
+        Debug.Log("Start dialogue " + dialogueQueue.Count);
         DisplayNextLine();
     }
 
@@ -56,11 +54,13 @@ public class DialogueManager : MonoBehaviour
 
         if (dialogueQueue.Count == 0)
         {
+            Debug.Log("dialogue quuee: " + dialogueQueue.Count);
             EndDialogue();
             return false;
         }
 
         string nextLine = dialogueQueue.Dequeue();
+        Debug.Log(nextLine);
         StartCoroutine(TypeText(nextLine));
         return true;
     }
@@ -71,6 +71,7 @@ public class DialogueManager : MonoBehaviour
     /// <param name="text">Text to type out.</param>
     private IEnumerator TypeText(string text)
     {
+        Debug.Log("type text");
         isTyping = true;
         dialogueText.text = "";
         foreach (char letter in text.ToCharArray())
@@ -101,8 +102,8 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     private void EndDialogue()
     {
+        Debug.Log("dialogue text is none");
         dialogueText.text = ""; // Clear text or trigger another action
-        EndDialogueEvent?.Invoke(this, EventArgs.Empty);
         Debug.Log("End Dialogue");
     }
 }

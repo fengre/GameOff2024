@@ -11,11 +11,12 @@ public class SceneChangeButton : MonoBehaviour
         SampleScene,
         FamilyHouse,
         River,
-        Dock,
+        Lake,
         VillageSquare,
         FarmHouse,
         Tree,
-        ClanLeaderHouse
+        ClanLeaderHouse,
+        EndScene
     }
 
     [SerializeField] private Button button;

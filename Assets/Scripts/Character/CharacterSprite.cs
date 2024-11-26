@@ -3,7 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class CharacterSprite : MonoBehaviour, IClickable
 {
-    public DialogueManager dialogueManager;
     public Character character;  // Assign the Character asset in the Inspector
     public DialogueUI dialogueUI;
     public SpriteRenderer characterImage;
@@ -11,12 +10,19 @@ public class CharacterSprite : MonoBehaviour, IClickable
 
     private void Awake()
     {
-        dialogueManager.EndDialogueEvent += DialogueManager_EndDialogueEvent;
+        dialogueUI.EndDialogueEvent += DialogueUI_EndDialogueEvent;
     }
 
-    private void DialogueManager_EndDialogueEvent(object sender, System.EventArgs e)
+    private void DialogueUI_EndDialogueEvent(object sender, System.EventArgs e)
     {
-        characterImage.sprite = character.idleImage;
+        if (hasReceivedItem)
+        {
+            characterImage.sprite = character.itemReceivedIdleImage;
+        }
+        else
+        {
+            characterImage.sprite = character.idleImage;
+        }
     }
 
     public void OnClick()
@@ -28,7 +34,14 @@ public class CharacterSprite : MonoBehaviour, IClickable
             firstShow = true;
         }
         
-        characterImage.sprite = character.speakingImage;
+        if (hasReceivedItem)
+        {
+            characterImage.sprite = character.itemReceivedSpeakingImage;
+        }
+        else
+        {
+            characterImage.sprite = character.speakingImage;
+        }
         dialogueUI.ShowPanel(character, hasReceivedItem, firstShow);
     }
 

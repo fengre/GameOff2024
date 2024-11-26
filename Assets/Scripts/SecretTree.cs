@@ -21,6 +21,9 @@ public class SecretTree : MonoBehaviour
 
     public GameObject endGameButton;
 
+    [Header("Secrets")]
+    public List<Item> secretItems; 
+
     public void Start()
     {
         originalColor = circleImage.color;
@@ -40,15 +43,38 @@ public class SecretTree : MonoBehaviour
             return;
         }
 
-        StartCoroutine(GlowEffect());
-
-        clickCount++;
-        UpdateCounterText();
-
-        if(clickCount >= maxSecrets && endGameButton != null)
+        Item secret = GetAvailableSecret();
+        if(secret != null)
         {
-            endGameButton.SetActive(true);
+            Inventory.Instance.RemoveItem(secret);
+            Debug.Log("Secret offered to tree.");
+
+            StartCoroutine(GlowEffect());
+
+            clickCount++;
+            UpdateCounterText();
+
+            if(clickCount >= maxSecrets && endGameButton != null)
+            {
+                endGameButton.SetActive(true);
+            }
         }
+        else
+        {
+            Debug.Log("No secrets in inventory");
+        }
+    }
+
+    private Item GetAvailableSecret()
+    {
+        foreach(var secret in secretItems)
+        {
+            if(Inventory.Instance.ContainsItem(secret))
+            {
+                return secret;
+            }
+        }
+        return null;
     }
 
     private IEnumerator GlowEffect()

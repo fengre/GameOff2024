@@ -323,6 +323,12 @@ MonoBehaviour:
   fadeSpeed: 1.5
   counterText: {fileID: 1404752085}
   endGameButton: {fileID: 298199234}
+  secretItems:
+  - {fileID: 11400000, guid: 5d6e0ca38b1547748b1dffc59fc6d53e, type: 2}
+  - {fileID: 11400000, guid: 161afed371b0c674b94a6b38c5eda0b7, type: 2}
+  - {fileID: 11400000, guid: e3bc5a045d71a2b418017eb7a61c0111, type: 2}
+  - {fileID: 11400000, guid: aab0a7d937d187b4bb7a9788dbe35b5d, type: 2}
+  - {fileID: 11400000, guid: f59935eda3a84354b81a3558c7d8ed4f, type: 2}
 --- !u!114 &162455759
 MonoBehaviour:
   m_ObjectHideFlags: 0

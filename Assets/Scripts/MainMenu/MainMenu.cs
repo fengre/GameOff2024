@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+
+public class MainMenu : BasePanelManager
 {
-    public GameObject settingsPanel;
+    
     public GameObject creditsPanel;
-    public Slider volumeSlider;
+    
 
     private void Start()
     {
@@ -35,15 +35,7 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void OpenSettings()
-    {
-        settingsPanel.SetActive(true);
-    }
-
-    public void CloseSettings()
-    {
-        settingsPanel.SetActive(false);
-    }
+    
 
     public void OpenCredits()
     {

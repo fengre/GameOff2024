@@ -15,7 +15,7 @@ public class SecretTree : MonoBehaviour
 
     [Header("Counter info")]
     public TMP_Text counterText;
-    private int clickCount = 0;
+    private static int clickCount = 0;
     private bool isAnimating = false;
     private const int maxSecrets = 5;
 

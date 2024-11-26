@@ -23,7 +23,6 @@ public class SceneManagement : MonoBehaviour
 
     public void PlayGame()
     {
-        ResetGameState();
         SceneManager.LoadScene("VillageSquare");
     }
 

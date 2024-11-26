@@ -7,6 +7,7 @@ public class SceneManagement : MonoBehaviour
 {
     //Create a singleton instance
     public static SceneManagement Instance {get; private set;}
+    public FadeManager fadeManager;
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class SceneManagement : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("VillageSquare");
+        StartCoroutine(TransitionToScene("VillageSquare"));
     }
 
     public void LoadSceneByName(string sceneName)
@@ -37,6 +38,19 @@ public class SceneManagement : MonoBehaviour
             Debug.LogError("Scene cannot be found in the build settings.");
         }
     }
+
+    private IEnumerator TransitionToScene(string sceneName)
+    {
+        //Fade out
+        if (fadeManager != null)
+        {
+            yield return fadeManager.FadeOut();
+        }
+
+        //Load new scene
+        SceneManager.LoadScene(sceneName);
+    }
+    
     //Reset PlayerData & return to MainMenu
     public void ResetGameState()
     {

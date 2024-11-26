@@ -9,8 +9,8 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Info")]
     public AudioClip mainMenuMusic;
-    public AudioClip gameSceneMusic;
-    public AudioClip endSceneMusic;
+    public AudioClip villageSquareMusic;
+    public AudioClip riverMusic;
 
     private AudioSource audioSource;
 
@@ -60,11 +60,11 @@ public class AudioManager : MonoBehaviour
             case "MainMenu":
                 selectedTrack = mainMenuMusic;
                 break;
-            case "OpeningScene":
-                selectedTrack = gameSceneMusic;
+            case "VillageSquare":
+                selectedTrack = villageSquareMusic;
                 break;
-            case "EndScene":
-                selectedTrack = endSceneMusic;
+            case "River":
+                selectedTrack = riverMusic;
                 break;
         }
 

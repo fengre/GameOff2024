@@ -36,7 +36,6 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueQueue.Enqueue(line);
         }
-        Debug.Log("Start dialogue " + dialogueQueue.Count);
         DisplayNextLine();
     }
 
@@ -54,7 +53,6 @@ public class DialogueManager : MonoBehaviour
 
         if (dialogueQueue.Count == 0)
         {
-            Debug.Log("dialogue quuee: " + dialogueQueue.Count);
             EndDialogue();
             return false;
         }
@@ -71,7 +69,6 @@ public class DialogueManager : MonoBehaviour
     /// <param name="text">Text to type out.</param>
     private IEnumerator TypeText(string text)
     {
-        Debug.Log("type text");
         isTyping = true;
         dialogueText.text = "";
         foreach (char letter in text.ToCharArray())
@@ -102,8 +99,6 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     private void EndDialogue()
     {
-        Debug.Log("dialogue text is none");
         dialogueText.text = ""; // Clear text or trigger another action
-        Debug.Log("End Dialogue");
     }
 }

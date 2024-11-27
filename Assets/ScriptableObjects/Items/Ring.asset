@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cf3a752b6796a46a0185f2d26e181d, type: 3}
   m_Name: Ring
   m_EditorClassIdentifier: 
-  itemName: Pitchfork
-  itemIcon: {fileID: 21300000, guid: 8691ff0ad44576a46b46b5b391fbebb8, type: 3}
+  itemName: Ring
+  itemIcon: {fileID: 21300000, guid: 673d52789d60bf549819dbb1986e9bcc, type: 3}
   description: A worn band engraved with the emblem of the clan. Its timeless design
     symbolizes unity, strength, and the enduring legacy of those who lead.

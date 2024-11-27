@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166.79993, y: 4}
+  m_AnchoredPosition: {x: 43, y: -65}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162455758
@@ -2077,7 +2077,7 @@ PrefabInstance:
     - target: {fileID: 3344021259680696997, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: ad7a46ae70a05c24186c33d4baf31b47, type: 2}
+      objectReference: {fileID: 11400000, guid: 7afb9d270783065429aaa031e18cf354, type: 2}
     - target: {fileID: 3344021259680696997, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: itemPickupUI
       value: 
@@ -2093,7 +2093,7 @@ PrefabInstance:
     - target: {fileID: 5024624538894436626, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6e991ce5cca7f434e96d0b7bd9c5edf3, type: 3}
+      objectReference: {fileID: 21300000, guid: 673d52789d60bf549819dbb1986e9bcc, type: 3}
     - target: {fileID: 5024624538894436626, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -2112,11 +2112,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5097335198621241201, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8
+      value: 2.42
       objectReference: {fileID: 0}
     - target: {fileID: 5097335198621241201, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: -2.616
       objectReference: {fileID: 0}
     - target: {fileID: 5097335198621241201, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2168,11 +2168,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6473184423505488819, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_Name
-      value: BabyBlanket
+      value: Ring
       objectReference: {fileID: 0}
     - target: {fileID: 6473184423505488819, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6184206407278493255, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
@@ -2225,18 +2225,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.11102617, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.2, y: 3.72}
+    oldSize: {x: 2.01, y: 2.51}
     newSize: {x: 6.12, y: 6.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.2, y: 3.72}
+  m_Size: {x: 2.6984313, y: 3.72}
   m_EdgeRadius: 0
 --- !u!1001 &450446827767508515
 PrefabInstance:
@@ -3126,7 +3126,7 @@ PrefabInstance:
     - target: {fileID: 5155513675169421323, guid: deee0ce7e0d8ceb408af0168948cfbc5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9ae2e521fd7ca8f4eb1191de3bab056c, type: 3}
+      objectReference: {fileID: 21300000, guid: db48da3666ae50f47969611abdff3739, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

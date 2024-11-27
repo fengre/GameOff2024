@@ -22,6 +22,11 @@ public class SceneManagement : MonoBehaviour
         }
     }
 
+    public void StartGame()
+    {
+        StartCoroutine(TransitionToScene("StartScene"));
+    }
+
     public void PlayGame()
     {
         StartCoroutine(TransitionToScene("VillageSquare"));

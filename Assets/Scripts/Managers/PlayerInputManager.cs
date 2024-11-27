@@ -15,7 +15,7 @@ public class PlayerInputManager : MonoBehaviour
         PlayerData.playerName = nameInputField.text;
         if(SceneManagement.Instance != null)
         {
-            SceneManagement.Instance.PlayGame();
+            SceneManagement.Instance.StartGame();
         }
 
     }

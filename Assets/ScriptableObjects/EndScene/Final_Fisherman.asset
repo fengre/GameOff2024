@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Final_Fisherman
   m_EditorClassIdentifier: 
   characterName: Fisherman
-  idleImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
-  speakingImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
-  itemReceivedIdleImage: {fileID: 21300000, guid: ea5141e7c4cffc147a3c8fcc5c70957b, type: 3}
-  itemReceivedSpeakingImage: {fileID: 21300000, guid: ea5141e7c4cffc147a3c8fcc5c70957b, type: 3}
-  desiredItem: {fileID: 11400000, guid: 7c40dd62078430445b574498523226b1, type: 2}
+  idleImage: {fileID: 0}
+  speakingImage: {fileID: 0}
+  itemReceivedIdleImage: {fileID: 0}
+  itemReceivedSpeakingImage: {fileID: 0}
+  desiredItem: {fileID: 0}
   secret: {fileID: 11400000, guid: e3bc5a045d71a2b418017eb7a61c0111, type: 2}
   initialDialogue:
   - "There was a time when the town was full of life\u2014boats lined the docks,

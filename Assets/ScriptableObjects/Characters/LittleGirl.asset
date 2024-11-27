@@ -20,7 +20,7 @@ MonoBehaviour:
   desiredItem: {fileID: 11400000, guid: c5b9f304207e0c64cab2ec357a21beee, type: 2}
   secret: {fileID: 11400000, guid: aab0a7d937d187b4bb7a9788dbe35b5d, type: 2}
   initialDialogue:
-  - "I don\u2019t think I\u2019ve seen you before! Can you help me?"
+  - Can you help me?
   - "I lost my dolly and I can\u2019t find her anywhere. Please bring her back!"
   postItemDialogue:
   - You found her! I looked everywhere for so long! Thank you so much!

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Final_LittleGirl
   m_EditorClassIdentifier: 
   characterName: Little Girl
-  idleImage: {fileID: 21300000, guid: da24ce434d5e08c40bc5826a041f2d82, type: 3}
-  speakingImage: {fileID: 21300000, guid: da24ce434d5e08c40bc5826a041f2d82, type: 3}
-  itemReceivedIdleImage: {fileID: 21300000, guid: da24ce434d5e08c40bc5826a041f2d82, type: 3}
-  itemReceivedSpeakingImage: {fileID: 21300000, guid: da24ce434d5e08c40bc5826a041f2d82, type: 3}
-  desiredItem: {fileID: 11400000, guid: c5b9f304207e0c64cab2ec357a21beee, type: 2}
+  idleImage: {fileID: 0}
+  speakingImage: {fileID: 0}
+  itemReceivedIdleImage: {fileID: 0}
+  itemReceivedSpeakingImage: {fileID: 0}
+  desiredItem: {fileID: 0}
   secret: {fileID: 11400000, guid: aab0a7d937d187b4bb7a9788dbe35b5d, type: 2}
   initialDialogue:
   - "I remember playing with my baby brother. I would make him giggle when I\u2019d

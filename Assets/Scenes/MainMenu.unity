@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 585774973}
   - component: {fileID: 585774972}
   m_Layer: 5
-  m_Name: Play Button
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1523,8 +1523,20 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1423540592}
+    m_TransformParent: {fileID: 1127028725}
     m_Modifications:
+    - target: {fileID: 246307795807250876, guid: 65a4d01feaca3864ebbae374a65db7e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1423540588}
+    - target: {fileID: 246307795807250876, guid: 65a4d01feaca3864ebbae374a65db7e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 246307795807250876, guid: 65a4d01feaca3864ebbae374a65db7e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BasePanelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1082101851806706899, guid: 65a4d01feaca3864ebbae374a65db7e0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2345,6 +2357,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 830731514}
   - {fileID: 554387045}
   - {fileID: 585774971}
   - {fileID: 1640454735}
@@ -2820,7 +2833,6 @@ RectTransform:
   - {fileID: 2032146076}
   - {fileID: 2101144975}
   - {fileID: 1746054361}
-  - {fileID: 830731514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3637,7 +3649,7 @@ RectTransform:
   m_GameObject: {fileID: 1746054358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1423540592}

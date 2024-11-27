@@ -9,10 +9,13 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Info")]
     public AudioClip mainMenuMusic;
-    public AudioClip villageSquareMusic;
-    public AudioClip riverMusic;
+    public AudioClip startSceneMusic;
 
-    private AudioSource audioSource;
+    [Header("Ambient Sounds")]
+    public AudioClip riverAmbientSound;
+
+    private AudioSource musicSource;
+    private AudioSource ambientSource;
 
 
     private void Awake()
@@ -28,10 +31,15 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.loop = true;
-        audioSource.playOnAwake = false;
-        audioSource.volume = 1.0f;
+        musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.loop = true;
+        musicSource.playOnAwake = false;
+        musicSource.volume = 1.0f;
+
+        ambientSource = gameObject.AddComponent<AudioSource>();
+        ambientSource.loop = true;
+        ambientSource.playOnAwake = false;
+        ambientSource.volume = 0.5f;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -53,47 +61,75 @@ public class AudioManager : MonoBehaviour
     public void PlayMusicForCurrentScene()
     {
         string sceneName = SceneManager.GetActiveScene().name;
-        AudioClip selectedTrack = null;
+
+        AudioClip selectedMusic = null;
+        AudioClip selectedAmbient = null;
 
         switch (sceneName)
         {
             case "MainMenu":
-                selectedTrack = mainMenuMusic;
+                selectedMusic = mainMenuMusic;
                 break;
-            case "VillageSquare":
-                selectedTrack = villageSquareMusic;
+            case "StartScene":
+                selectedMusic = startSceneMusic;
                 break;
             case "River":
-                selectedTrack = riverMusic;
+            case "Lake":
+                selectedAmbient = riverAmbientSound;
                 break;
         }
 
-        if(selectedTrack != null && audioSource.clip != selectedTrack)
+        if(selectedMusic != null && musicSource.clip != selectedMusic)
         {
-            audioSource.clip = selectedTrack;
-            audioSource.Play();
+            musicSource.clip = selectedMusic;
+            musicSource.Play();
+        }
+
+        if (selectedAmbient != null && ambientSource.clip != selectedAmbient)
+        {
+            ambientSource.clip = selectedAmbient;
+            ambientSource.Play();
+        }
+        else if (selectedAmbient == null)
+        {
+            //Stop ambient if none is set scene
+            ambientSource.Stop();
         }
     }
 
     public void StopMusic()
     {
-        if(audioSource != null && audioSource.isPlaying)
+        if(musicSource != null)
         {
-            audioSource.Stop();
+            musicSource.Stop();
+        }
+
+        if(ambientSource != null)
+        {
+            ambientSource.Stop();
         }
     }
 
     public void SetVolume(float volume)
     {
-        if(audioSource != null)
+        if(musicSource != null)
         {
-            audioSource.volume = Mathf.Clamp01(volume);
+            musicSource.volume = Mathf.Clamp01(volume);
         }
     }
 
+    public void SetAmbientVolume(float volume)
+    {
+        if (ambientSource != null)
+        {
+            ambientSource.volume = Mathf.Clamp01(volume);
+        }
+    }
+
+
     public float GetVolume()
     {
-        return audioSource != null ? audioSource.volume : 0f;
+        return musicSource != null ? musicSource.volume : 0f;
     }
 
 }

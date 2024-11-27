@@ -21,11 +21,13 @@ public class BasePanelManager : MonoBehaviour
 
     public void OpenSettings()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.onClickSFX);
         settingsPanel.SetActive(true);
     }
 
     public void CloseSettings()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.onClickSFX);
         settingsPanel.SetActive(false);
     }
 }

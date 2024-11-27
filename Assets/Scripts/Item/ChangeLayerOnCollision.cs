@@ -18,6 +18,7 @@ public class ChangeLayerOnCollision : MonoBehaviour
         {
             spriteType = "Character";
         }
+        SetLayer(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

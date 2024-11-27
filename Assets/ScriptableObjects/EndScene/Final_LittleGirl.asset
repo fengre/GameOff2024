@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f3f61d00b4c7e48948f3dbaa88e82b, type: 3}
+  m_Name: Final_LittleGirl
+  m_EditorClassIdentifier: 
+  characterName: Little Girl
+  idleImage: {fileID: 0}
+  speakingImage: {fileID: 0}
+  itemReceivedIdleImage: {fileID: 0}
+  itemReceivedSpeakingImage: {fileID: 0}
+  desiredItem: {fileID: 0}
+  secret: {fileID: 11400000, guid: aab0a7d937d187b4bb7a9788dbe35b5d, type: 2}
+  initialDialogue:
+  - "I remember playing with my baby brother. I would make him giggle when I\u2019d
+    rock him or play peek-a-boo with his tiny hands. He always looked at me like
+    I was his whole world."
+  - "I haven\u2019t seen him since that day. But I\u2019d know him anywhere. I\u2019d
+    recognize his smile, his soft little hands, even if I saw him from miles away."
+  postItemDialogue: []

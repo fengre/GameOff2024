@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f3f61d00b4c7e48948f3dbaa88e82b, type: 3}
+  m_Name: Final_Fisherman
+  m_EditorClassIdentifier: 
+  characterName: Fisherman
+  idleImage: {fileID: 0}
+  speakingImage: {fileID: 0}
+  itemReceivedIdleImage: {fileID: 0}
+  itemReceivedSpeakingImage: {fileID: 0}
+  desiredItem: {fileID: 0}
+  secret: {fileID: 11400000, guid: e3bc5a045d71a2b418017eb7a61c0111, type: 2}
+  initialDialogue:
+  - "There was a time when the town was full of life\u2014boats lined the docks,
+    and the market full of laughter."
+  - 'But the real magic... that was in the old tree at the heart of the town. The
+    one we made offerings to, asking for a good harvest, a bountiful hunt. '
+  - Now, we're all wandering the village like shadows, caught in a memory of what
+    we had.
+  postItemDialogue: []

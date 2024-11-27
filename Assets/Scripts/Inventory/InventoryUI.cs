@@ -63,6 +63,7 @@ public class InventoryUI : MonoBehaviour
 
     private void ShowPanel()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.backpackOpenSFX);
         inventoryUIPanel.SetActive(true);
         ResetPanel();
         UpdateInventoryUI();
@@ -76,6 +77,7 @@ public class InventoryUI : MonoBehaviour
 
     private void HidePanel()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.backpackCloseSFX);
         inventoryUIPanel.SetActive(false);
     }
 }

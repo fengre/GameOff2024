@@ -12,6 +12,7 @@ public class PlayerInputManager : MonoBehaviour
     //Stores the name, hides input panel, triggers opening scene
     public void OnSubmitName()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.startButtonSFX);
         PlayerData.playerName = nameInputField.text;
         if(SceneManagement.Instance != null)
         {

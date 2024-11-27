@@ -6,15 +6,28 @@ public class ItemSprite : MonoBehaviour, IClickable
     [SerializeField] private Item item; // Reference to the item that this object represents
     [SerializeField] private ItemPickupUI itemPickupUI;
 
-    public void OnClick()
+    private void Start()
     {
-        Inventory.Instance.AddItem(item);
-        ShowPanel();
-        Destroy(gameObject);
+        if (ItemManager.CollectedItems.Contains(item.itemName))
+        {
+            gameObject.SetActive(false); // Hide the item
+        }
     }
 
-    private void ShowPanel()
+    public void OnClick()
     {
+        if (!ItemManager.CollectedItems.Contains(item.itemName))
+        {
+            ItemManager.CollectedItems.Add(item.itemName);
+            CollectItem();
+            gameObject.SetActive(false); // Hide or disable the item
+        }
+    }
+
+    private void CollectItem()
+    {
+        Inventory.Instance.AddItem(item);
         itemPickupUI.ShowPanel(item);
+        Debug.Log($"Collected item: {item.itemName}");
     }
 }

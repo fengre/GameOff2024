@@ -2609,6 +2609,7 @@ MonoBehaviour:
   startButtonSFX: {fileID: 8300000, guid: 1dc7790bdf9da984a9a472092221f464, type: 3}
   backpackOpenSFX: {fileID: 8300000, guid: f10e6d24a495222419bd79fd3718e3d4, type: 3}
   backpackCloseSFX: {fileID: 8300000, guid: a926f85d60e2e0442ae8957b153bb962, type: 3}
+  onClickSFX: {fileID: 8300000, guid: e66d7a64d81bbb94dbb17e356fa82542, type: 3}
 --- !u!4 &1291174266
 Transform:
   m_ObjectHideFlags: 0

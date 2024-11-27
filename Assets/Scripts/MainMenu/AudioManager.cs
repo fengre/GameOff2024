@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip startButtonSFX;
     public AudioClip backpackOpenSFX;
     public AudioClip backpackCloseSFX;
+    public AudioClip onClickSFX;
 
     private void Awake()
     {

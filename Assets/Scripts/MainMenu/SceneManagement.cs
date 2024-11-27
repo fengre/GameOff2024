@@ -34,6 +34,7 @@ public class SceneManagement : MonoBehaviour
 
     public void LoadSceneByName(string sceneName)
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.onClickSFX);
         if (Application.CanStreamedLevelBeLoaded(sceneName))
         {
             SceneManager.LoadScene(sceneName);

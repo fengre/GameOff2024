@@ -2606,6 +2606,9 @@ MonoBehaviour:
   mainMenuMusic: {fileID: 8300000, guid: 01bc2760ccdac5b42bb0a40887be70e3, type: 3}
   startSceneMusic: {fileID: 8300000, guid: 0564395a05de5c64bb3a5b434bd1ae82, type: 3}
   riverAmbientSound: {fileID: 8300000, guid: fced5578e3bc5ad439fb53ed479da22a, type: 3}
+  startButtonSFX: {fileID: 8300000, guid: 1dc7790bdf9da984a9a472092221f464, type: 3}
+  backpackOpenSFX: {fileID: 8300000, guid: f10e6d24a495222419bd79fd3718e3d4, type: 3}
+  backpackCloseSFX: {fileID: 8300000, guid: a926f85d60e2e0442ae8957b153bb962, type: 3}
 --- !u!4 &1291174266
 Transform:
   m_ObjectHideFlags: 0

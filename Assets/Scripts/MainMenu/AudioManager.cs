@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance {get; private set;}
+    private AudioSource musicSource;
+    private AudioSource ambientSource;
+    private AudioSource sfxSource;
 
     [Header("Audio Info")]
     public AudioClip mainMenuMusic;
@@ -14,9 +17,10 @@ public class AudioManager : MonoBehaviour
     [Header("Ambient Sounds")]
     public AudioClip riverAmbientSound;
 
-    private AudioSource musicSource;
-    private AudioSource ambientSource;
-
+    [Header("SFX")]
+    public AudioClip startButtonSFX;
+    public AudioClip backpackOpenSFX;
+    public AudioClip backpackCloseSFX;
 
     private void Awake()
     {
@@ -40,6 +44,11 @@ public class AudioManager : MonoBehaviour
         ambientSource.loop = true;
         ambientSource.playOnAwake = false;
         ambientSource.volume = 0.5f;
+
+        sfxSource = gameObject.AddComponent<AudioSource>();
+        sfxSource.loop = false;
+        sfxSource.playOnAwake = false;
+        sfxSource.volume = 1.0f;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -92,8 +101,15 @@ public class AudioManager : MonoBehaviour
         }
         else if (selectedAmbient == null)
         {
-            //Stop ambient if none is set scene
+            //Stop ambient if none is set to scene
             ambientSource.Stop();
+        }
+    }
+    public void PlaySFX(AudioClip clip)
+    {
+        if (sfxSource != null && clip != null)
+        {
+            sfxSource.PlayOneShot(clip);
         }
     }
 
@@ -125,6 +141,14 @@ public class AudioManager : MonoBehaviour
             ambientSource.volume = Mathf.Clamp01(volume);
         }
     }
+
+    public void SetSFXVolume(float volume)
+{
+    if (sfxSource != null)
+    {
+        sfxSource.volume = Mathf.Clamp01(volume);
+    }
+}
 
 
     public float GetVolume()

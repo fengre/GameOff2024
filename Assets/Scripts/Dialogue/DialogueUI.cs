@@ -52,7 +52,10 @@ public class DialogueUI : MonoBehaviour
     {
         currCharacter = character;
         characterNameText.text = character.characterName;
-        dialogueManager.StartDialogue(character.GetDialogue(hasReceivedItem));
+
+        var (dialogue, audioClips) = character.GetDialogueAndAudio(hasReceivedItem);
+        dialogueManager.StartDialogue(dialogue, audioClips);
+        
         if (hasReceivedItem && firstShow)
         {
             SetButtons(false);

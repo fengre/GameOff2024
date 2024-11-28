@@ -15,6 +15,8 @@ MonoBehaviour:
   characterName: Clan Leader
   idleImage: {fileID: 21300000, guid: da24ce434d5e08c40bc5826a041f2d82, type: 3}
   speakingImage: {fileID: 21300000, guid: da24ce434d5e08c40bc5826a041f2d82, type: 3}
+  itemReceivedIdleImage: {fileID: 0}
+  itemReceivedSpeakingImage: {fileID: 0}
   desiredItem: {fileID: 11400000, guid: 7afb9d270783065429aaa031e18cf354, type: 2}
   secret: {fileID: 11400000, guid: 5d6e0ca38b1547748b1dffc59fc6d53e, type: 2}
   initialDialogue:
@@ -24,3 +26,5 @@ MonoBehaviour:
   - "Ah, there it is\u2014the emblem of our clan!"
   - It still fits perfectly, as if time never passed.
   - You've done me a great honor.
+  initialDialogueAudio: []
+  postItemDialogueAudio: []

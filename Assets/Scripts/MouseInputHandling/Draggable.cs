@@ -14,21 +14,18 @@ public class Draggable : MonoBehaviour, IClickable
 
     public void OnClick()
     {
-        Debug.Log("on click, set dragging");
         isDragging = true;
     }
 
     void OnMouseDown()
     {
         // Allow dragging only if the object is the topmost under the mouse pointer
-        Debug.Log("on mouse down");
         Vector3 mousePosition = GetMouseWorldPosition();
         offset = transform.position - mousePosition;
     }
 
     void OnMouseDrag()
     {
-        Debug.Log("on mouse drag");
         if (isDragging)
         {
             Vector3 mousePosition = GetMouseWorldPosition();

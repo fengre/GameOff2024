@@ -6,24 +6,52 @@ using UnityEngine.UI;
 public class BasePanelManager : MonoBehaviour
 {
     public GameObject settingsPanel;
-    public Slider volumeSlider;
+    public Slider musicVolumeSlider;
+    public Slider ambientVolumeSlider;
+    public Slider sfxVolumeSlider;
 
     private void Start()
     {
-        //Ensures slider matches current volume
-        if(volumeSlider != null && AudioManager.Instance != null)
+        if (AudioManager.Instance != null)
         {
-            volumeSlider.value = AudioManager.Instance.GetVolume();
-            volumeSlider.onValueChanged.AddListener(UpdateVolume);
+            //Initialize sliders with saved values
+            if (musicVolumeSlider != null)
+            {
+                musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
+                musicVolumeSlider.onValueChanged.AddListener(UpdateMusicVolume);
+            }
+
+            if (ambientVolumeSlider != null)
+            {
+                ambientVolumeSlider.value = AudioManager.Instance.GetAmbientVolume();
+                ambientVolumeSlider.onValueChanged.AddListener(UpdateAmbientVolume);
+            }
+
+            if (sfxVolumeSlider != null)
+            {
+                sfxVolumeSlider.value = AudioManager.Instance.GetSFXVolume();
+                sfxVolumeSlider.onValueChanged.AddListener(UpdateSFXVolume);
+            }
         }
     }
     private void OnDestroy()
     {
-        if(volumeSlider != null)
+        if (musicVolumeSlider != null)
         {
-            volumeSlider.onValueChanged.RemoveListener(UpdateVolume);
+            musicVolumeSlider.onValueChanged.RemoveListener(UpdateMusicVolume);
+        }
+
+        if (ambientVolumeSlider != null)
+        {
+            ambientVolumeSlider.onValueChanged.RemoveListener(UpdateAmbientVolume);
+        }
+
+        if (sfxVolumeSlider != null)
+        {
+            sfxVolumeSlider.onValueChanged.RemoveListener(UpdateSFXVolume);
         }
     }
+
     public void LoadScene(string sceneName)
     {
         if (SceneManagement.Instance != null)
@@ -48,11 +76,18 @@ public class BasePanelManager : MonoBehaviour
         settingsPanel.SetActive(false);
     }
 
-    public void UpdateVolume(float volume)
+    private void UpdateMusicVolume(float volume)
     {
-        if(AudioManager.Instance != null)
-        {
-            AudioManager.Instance.SetVolume(volume);
-        }
+        AudioManager.Instance?.SetMusicVolume(volume);
+    }
+
+    private void UpdateAmbientVolume(float volume)
+    {
+        AudioManager.Instance?.SetAmbientVolume(volume);
+    }
+
+    private void UpdateSFXVolume(float volume)
+    {
+        AudioManager.Instance?.SetSFXVolume(volume);
     }
 }

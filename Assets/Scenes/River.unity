@@ -375,7 +375,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 2095740965}
-  volumeSlider: {fileID: 2095740963}
+  musicVolumeSlider: {fileID: 2095740963}
+  ambientVolumeSlider: {fileID: 2095740967}
+  sfxVolumeSlider: {fileID: 2095740966}
 --- !u!1001 &211389767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1535,6 +1537,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994568957670939051, guid: 9b4758efba4292543af7bc2b1b45aa51, type: 3}
   m_PrefabInstance: {fileID: 2095740962}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2095740966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3472641325903237976, guid: 9b4758efba4292543af7bc2b1b45aa51, type: 3}
+  m_PrefabInstance: {fileID: 2095740962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2095740967 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7432583477804419108, guid: 9b4758efba4292543af7bc2b1b45aa51, type: 3}
+  m_PrefabInstance: {fileID: 2095740962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2104458201
 PrefabInstance:
   m_ObjectHideFlags: 0

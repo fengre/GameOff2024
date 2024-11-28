@@ -21,22 +21,33 @@ public class ClickHandler : MonoBehaviour
                 // Sort the hits by distance from the camera to get the topmost object
                 System.Array.Sort(hits, CompareBySortingOrder);
 
-                // Get the topmost hit that has an IClickable component
+                bool lensHit = false;
+
+                // Click on character
                 foreach (RaycastHit2D hit in hits)
                 {
-                    CharacterSprite character = hit.collider.GetComponent<CharacterSprite>();
-                    if (character != null)
+                    if (hit.collider.CompareTag("Lens"))
                     {
+                        Debug.Log("lens hit");
+                        lensHit = true;
+                    }
+
+                    CharacterSprite character = hit.collider.GetComponent<CharacterSprite>();
+                    if (character != null && lensHit)
+                    {
+                        Debug.Log("character hit");
                         IClickable clickable = hit.collider.GetComponent<IClickable>();
                         clickable.OnClick();
                         return; // Stop after the first topmost clickable object
                     }
                 }
 
+                // Click not on character: item or lens
                 foreach (RaycastHit2D hit in hits)
                 {
+                    CharacterSprite character = hit.collider.GetComponent<CharacterSprite>();
                     IClickable clickable = hit.collider.GetComponent<IClickable>();
-                    if (clickable != null)
+                    if (character == null && clickable != null)
                     {
                         clickable.OnClick();
                         return; // Stop after the first topmost clickable object

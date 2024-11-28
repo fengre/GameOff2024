@@ -80,6 +80,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         string nextLine = dialogueQueue.Dequeue();
+
         AudioClip nextClip = (audioQueue != null && audioQueue.Count > 0) ? audioQueue.Dequeue() : null;
 
         Debug.Log(nextLine);
@@ -89,6 +90,7 @@ public class DialogueManager : MonoBehaviour
             audioSource.clip = nextClip;
             audioSource.Play();
         }
+
 
         StartCoroutine(TypeText(nextLine));
         return true;

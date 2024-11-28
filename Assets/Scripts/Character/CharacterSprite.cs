@@ -27,6 +27,7 @@ public class CharacterSprite : MonoBehaviour, IClickable
 
     public void OnClick()
     {
+        Debug.Log("clicked character");
         bool firstShow = false;
         if (!hasReceivedItem && Inventory.Instance.ContainsItem(character.desiredItem)) {
             GiveItem();

@@ -58,7 +58,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         string nextLine = dialogueQueue.Dequeue();
-        Debug.Log(nextLine);
         StartCoroutine(TypeText(nextLine));
         return true;
     }

@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public float typingSpeed = 0.05f; // Speed of typing
 
     private Queue<string> dialogueQueue; // Queue for multiple lines of dialogue
+    private Queue<AudioClip> audioQueue;
     private AudioSource audioSource; // For playing typing sounds
     private bool isTyping = false; // Whether currently typing
     private bool skipTyping = false; // Flag to skip typing animation
@@ -18,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         dialogueQueue = new Queue<string>();
+        audioQueue = new Queue<AudioClip>();
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -29,13 +31,33 @@ public class DialogueManager : MonoBehaviour
     /// Starts the dialogue sequence with an array of lines.
     /// </summary>
     /// <param name="lines">Array of dialogue lines to display.</param>
-    public void StartDialogue(string[] lines)
+    public void StartDialogue(string[] lines, AudioClip[] audioClips)
     {
         dialogueQueue.Clear();
+        audioQueue.Clear();
+
         foreach (string line in lines)
         {
             dialogueQueue.Enqueue(line);
         }
+
+        if (audioClips != null)
+        {
+            //Fill audioQueue with clips or nulls to match the number of dialogue lines
+            for (int i = 0; i < lines.Length; i++)
+            {
+                audioQueue.Enqueue(i < audioClips.Length ? audioClips[i] : null);
+            }
+        }
+        else
+        {
+            //If no audioClips array is provided, fill the queue with nulls
+            for (int i = 0; i < lines.Length; i++)
+            {
+                audioQueue.Enqueue(null);
+            }
+        }
+
         DisplayNextLine();
     }
 
@@ -58,7 +80,16 @@ public class DialogueManager : MonoBehaviour
         }
 
         string nextLine = dialogueQueue.Dequeue();
+        AudioClip nextClip = (audioQueue != null && audioQueue.Count > 0) ? audioQueue.Dequeue() : null;
+
         Debug.Log(nextLine);
+
+        if (nextClip != null)
+        {
+            audioSource.clip = nextClip;
+            audioSource.Play();
+        }
+
         StartCoroutine(TypeText(nextLine));
         return true;
     }

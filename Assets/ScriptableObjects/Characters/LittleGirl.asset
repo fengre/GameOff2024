@@ -24,4 +24,12 @@ MonoBehaviour:
   - "I lost my dolly and I can\u2019t find her anywhere. Please bring her back!"
   postItemDialogue:
   - You found her! I looked everywhere for so long! Thank you so much!
-  - "I remembered so many fun things. Here, take this, it\u2019s for you!"
+  - 'I remembered so many fun things. '
+  - "Here, take this, it\u2019s for you!"
+  initialDialogueAudio:
+  - {fileID: 8300000, guid: 13030ea9408d86d4e8e26d194b0d0d13, type: 3}
+  - {fileID: 8300000, guid: b889aa82d02ba5e4ab0c9776ed3ff0cd, type: 3}
+  postItemDialogueAudio:
+  - {fileID: 8300000, guid: 32c1f225bf240dd42b16a316d7709200, type: 3}
+  - {fileID: 8300000, guid: df6f53e34d21e73469628eacd285a578, type: 3}
+  - {fileID: 8300000, guid: f0f6583623467924199690a25e1420c4, type: 3}

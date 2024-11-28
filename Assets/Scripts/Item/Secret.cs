@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewSecret", menuName = "ScriptableObjects/Secret")]
 public class Secret : Item
 {
-    public Sprite secretImage;
+    public Sprite[] secretImages;
 }

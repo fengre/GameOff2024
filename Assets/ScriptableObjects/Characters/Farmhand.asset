@@ -15,8 +15,8 @@ MonoBehaviour:
   characterName: Farmhand
   idleImage: {fileID: 21300000, guid: 5f8ca116640ff754db19d251418be6ff, type: 3}
   speakingImage: {fileID: 21300000, guid: 5f8ca116640ff754db19d251418be6ff, type: 3}
-  itemReceivedIdleImage: {fileID: 0}
-  itemReceivedSpeakingImage: {fileID: 0}
+  itemReceivedIdleImage: {fileID: 21300000, guid: 5f8ca116640ff754db19d251418be6ff, type: 3}
+  itemReceivedSpeakingImage: {fileID: 21300000, guid: 5f8ca116640ff754db19d251418be6ff, type: 3}
   desiredItem: {fileID: 11400000, guid: 6af475504ecd2d34297c3b1d77aea419, type: 2}
   secret: {fileID: 11400000, guid: 161afed371b0c674b94a6b38c5eda0b7, type: 2}
   initialDialogue:
@@ -24,3 +24,5 @@ MonoBehaviour:
   postItemDialogue:
   - Ah, my old pitchfork!
   - "A bit rusted, but it\u2019ll do. Time to set things right."
+  initialDialogueAudio: []
+  postItemDialogueAudio: []

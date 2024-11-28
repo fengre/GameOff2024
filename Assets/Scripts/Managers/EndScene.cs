@@ -15,6 +15,7 @@ public class EndScene : MonoBehaviour
     public GameObject blackPanel;
 
     private int index = 0;
+    private int secretIndex = 0;
 
     private void Start()
     {
@@ -23,10 +24,18 @@ public class EndScene : MonoBehaviour
         blackPanel.SetActive(false);
 
         Character c = characters[index];
-        secretImage.sprite = c.secret.secretImage;
+        secretImage.sprite = c.secret.secretImages[secretIndex];
         dialogueUI.ShowPanel(c, false, false);
 
+        dialogueUI.NextDialogueEvent += DialogueUI_NextDialogueEvent;
         dialogueUI.EndDialogueEvent += DialogueUI_EndDialogueEvent;
+    }
+
+    private void DialogueUI_NextDialogueEvent(object sender, System.EventArgs e)
+    {
+        Character c = characters[index];
+        secretIndex = Mathf.Min(secretIndex + 1, c.secret.secretImages.Length - 1);
+        secretImage.sprite = c.secret.secretImages[secretIndex];
     }
 
     private void DialogueUI_EndDialogueEvent(object sender, System.EventArgs e)
@@ -35,7 +44,8 @@ public class EndScene : MonoBehaviour
         {
             index++;
             Character c = characters[index];
-            secretImage.sprite = c.secret.secretImage;
+            secretIndex = 0;
+            secretImage.sprite = c.secret.secretImages[secretIndex];
             dialogueUI.ShowPanel(c, false, false);
         }
         else

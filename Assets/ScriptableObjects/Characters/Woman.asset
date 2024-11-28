@@ -23,7 +23,7 @@ MonoBehaviour:
   - How I miss my baby.
   - I would give anything for something to remind me of them...
   postItemDialogue:
-  - You brought my baby's blanket!
+  - You brought my baby's rattle toy!
   - This is bringing back so many memories...
   initialDialogueAudio:
   - {fileID: 8300000, guid: e0e0149b12e29b44fac94c3fde6fd5a0, type: 3}

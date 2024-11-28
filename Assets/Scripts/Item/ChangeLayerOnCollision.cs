@@ -14,7 +14,7 @@ public class ChangeLayerOnCollision : MonoBehaviour
         {
             spriteType = "Item";
         }
-        else
+        else if (GetComponent<CharacterSprite>() != null)
         {
             spriteType = "Character";
         }

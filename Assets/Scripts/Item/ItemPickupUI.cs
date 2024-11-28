@@ -34,7 +34,7 @@ public class ItemPickupUI : MonoBehaviour
         {
             Secret secret = item as Secret;
             viewButton.gameObject.SetActive(true);
-            viewButton.onClick.AddListener(() => ShowMemory(secret.secretImage));
+            viewButton.onClick.AddListener(() => ShowMemory(secret.secretImages));
         }
         else
         {
@@ -42,8 +42,8 @@ public class ItemPickupUI : MonoBehaviour
         }
     }
 
-    public void ShowMemory(Sprite secretImage)
+    public void ShowMemory(Sprite[] secretImages)
     {
-        secretUI.ShowPanel(secretImage);
+        secretUI.ShowPanel(secretImages);
     }
 }

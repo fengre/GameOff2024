@@ -33,6 +33,7 @@ public class ClickHandler : MonoBehaviour
                     }
 
                     CharacterSprite character = hit.collider.GetComponent<CharacterSprite>();
+                    Debug.Log((character != null) + " " + lensHit);
                     if (character != null && lensHit)
                     {
                         Debug.Log("character hit");

@@ -743,6 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInputField: {fileID: 1640454734}
+  startButton: {fileID: 585774970}
 --- !u!4 &481218771
 Transform:
   m_ObjectHideFlags: 0
@@ -1178,7 +1179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &585774971
 RectTransform:
   m_ObjectHideFlags: 0

@@ -33,8 +33,6 @@ public class SecretUI : MonoBehaviour
 
         ClosePanel();
 
-        Debug.Log("display images done, show self dialogue");
-
         ShowSelfDialogue();
     }
 

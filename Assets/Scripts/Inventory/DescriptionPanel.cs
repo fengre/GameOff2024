@@ -30,7 +30,7 @@ public class DescriptionPanel : MonoBehaviour
         {
             Secret secret = item as Secret;
             viewButton.gameObject.SetActive(true);
-            Debug.Log("show description panel");
+            viewButton.onClick.RemoveAllListeners();
             viewButton.onClick.AddListener(() => ShowMemory(secret.secretImages));
         }
         else
@@ -47,7 +47,6 @@ public class DescriptionPanel : MonoBehaviour
 
     public void ShowMemory(Sprite[] secretImages)
     {
-        Debug.Log("show memory");
         secretUI.ShowPanel(secretImages);
     }
 }

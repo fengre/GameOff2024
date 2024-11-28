@@ -34,6 +34,10 @@ public class InventorySlot : MonoBehaviour
     private void OnSlotClick()
     {
         // If there's a listener for the event, invoke it
+        if (onSlotClicked == null)
+        {
+            Debug.LogError("on slot clicked null");
+        }
         onSlotClicked?.Invoke(currentItem);
     }
 }

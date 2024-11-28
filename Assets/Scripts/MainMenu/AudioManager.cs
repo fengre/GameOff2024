@@ -23,6 +23,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip backpackCloseSFX;
     public AudioClip onClickSFX;
 
+    private const string MUSIC_VOLUME_KEY = "MusicVolume";
+    private const string AMBIENT_VOLUME_KEY = "AmbientVolume";
+    private const string SFX_VOLUME_KEY = "SFXVolume";
+
     private void Awake()
     {
         if(Instance == null)
@@ -39,17 +43,17 @@ public class AudioManager : MonoBehaviour
         musicSource = gameObject.AddComponent<AudioSource>();
         musicSource.loop = true;
         musicSource.playOnAwake = false;
-        musicSource.volume = 1.0f;
+        musicSource.volume = PlayerPrefs.GetFloat(MUSIC_VOLUME_KEY, 1.0f);
 
         ambientSource = gameObject.AddComponent<AudioSource>();
         ambientSource.loop = true;
         ambientSource.playOnAwake = false;
-        ambientSource.volume = 0.5f;
+        ambientSource.volume = PlayerPrefs.GetFloat(AMBIENT_VOLUME_KEY, 0.5f);
 
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.loop = false;
         sfxSource.playOnAwake = false;
-        sfxSource.volume = 1.0f;
+        sfxSource.volume = PlayerPrefs.GetFloat(SFX_VOLUME_KEY, 1.0f);
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -127,11 +131,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void SetVolume(float volume)
+    public void SetMusicVolume(float volume)
     {
-        if(musicSource != null)
+        if (musicSource != null)
         {
             musicSource.volume = Mathf.Clamp01(volume);
+            PlayerPrefs.SetFloat(MUSIC_VOLUME_KEY, volume);
         }
     }
 
@@ -140,21 +145,21 @@ public class AudioManager : MonoBehaviour
         if (ambientSource != null)
         {
             ambientSource.volume = Mathf.Clamp01(volume);
+            PlayerPrefs.SetFloat(AMBIENT_VOLUME_KEY, volume);
         }
     }
 
     public void SetSFXVolume(float volume)
-{
-    if (sfxSource != null)
     {
-        sfxSource.volume = Mathf.Clamp01(volume);
-    }
-}
-
-
-    public float GetVolume()
-    {
-        return musicSource != null ? musicSource.volume : 0f;
+        if (sfxSource != null)
+        {
+            sfxSource.volume = Mathf.Clamp01(volume);
+            PlayerPrefs.SetFloat(SFX_VOLUME_KEY, volume);
+        }
     }
 
+
+    public float GetMusicVolume() => musicSource != null ? musicSource.volume : 0f;
+    public float GetAmbientVolume() => ambientSource != null ? ambientSource.volume : 0f;
+    public float GetSFXVolume() => sfxSource != null ? sfxSource.volume : 0f;
 }

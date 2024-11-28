@@ -7,6 +7,23 @@ public class BasePanelManager : MonoBehaviour
 {
     public GameObject settingsPanel;
     public Slider volumeSlider;
+
+    private void Start()
+    {
+        //Ensures slider matches current volume
+        if(volumeSlider != null && AudioManager.Instance != null)
+        {
+            volumeSlider.value = AudioManager.Instance.GetVolume();
+            volumeSlider.onValueChanged.AddListener(UpdateVolume);
+        }
+    }
+    private void OnDestroy()
+    {
+        if(volumeSlider != null)
+        {
+            volumeSlider.onValueChanged.RemoveListener(UpdateVolume);
+        }
+    }
     public void LoadScene(string sceneName)
     {
         if (SceneManagement.Instance != null)
@@ -29,5 +46,13 @@ public class BasePanelManager : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.onClickSFX);
         settingsPanel.SetActive(false);
+    }
+
+    public void UpdateVolume(float volume)
+    {
+        if(AudioManager.Instance != null)
+        {
+            AudioManager.Instance.SetVolume(volume);
+        }
     }
 }

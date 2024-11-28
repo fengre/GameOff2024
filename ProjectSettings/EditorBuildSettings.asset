@@ -25,7 +25,7 @@ EditorBuildSettings:
     guid: adad7414bd639264a8ec0c73823069db
   - enabled: 1
     path: Assets/Scenes/PastScenes/River2.unity
-    guid: 3686cf953b071b544a14d76e0b2bf8e9
+    guid: 355631af0c068e1489b723c0712040a6
   - enabled: 1
     path: Assets/Scenes/PastScenes/Fisherman.unity
     guid: f28c78dc2c350f84c9198b16ecdd3025
@@ -34,7 +34,7 @@ EditorBuildSettings:
     guid: 7f6b976e8a7b2204d8842179431fbcd9
   - enabled: 1
     path: Assets/Scenes/River.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: af748bbbb21cdd243a9e17d3e4e8f442
   - enabled: 1
     path: Assets/Scenes/FamilyHouse.unity
     guid: 8dedb4f703cb6174bb130c4e063e975b
@@ -53,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tree.unity
     guid: 7e9cf611eba9b764c8538e63858628eb
+  - enabled: 1
+    path: Assets/Scenes/TreeCloseup.unity
+    guid: b4d1ba2f0e9beff43a83f6762d41667d
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 261af47d1e6d259458bd681ab951d000

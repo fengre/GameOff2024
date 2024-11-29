@@ -571,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemNameText: {fileID: 4493644979019140767}
   itemDescriptionText: {fileID: 7569266735358580981}
+  descriptionPanelGO: {fileID: 3227617347712232196}
   itemImage: {fileID: 6157255758443820146}
   viewButton: {fileID: 7861352716645737847}
   secretUI: {fileID: 0}

@@ -34,6 +34,7 @@ public class ItemPickupUI : MonoBehaviour
         {
             Secret secret = item as Secret;
             viewButton.gameObject.SetActive(true);
+            viewButton.onClick.RemoveAllListeners();
             viewButton.onClick.AddListener(() => ShowMemory(secret.secretImages));
         }
         else

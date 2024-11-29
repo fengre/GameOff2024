@@ -8,7 +8,7 @@ public class ItemSprite : MonoBehaviour, IClickable
 
     private void Start()
     {
-        if (ItemManager.CollectedItems.Contains(item.itemName))
+        if (PlayerData.CollectedItems.Contains(item.itemName))
         {
             gameObject.SetActive(false); // Hide the item
         }
@@ -16,9 +16,9 @@ public class ItemSprite : MonoBehaviour, IClickable
 
     public void OnClick()
     {
-        if (!ItemManager.CollectedItems.Contains(item.itemName))
+        if (!PlayerData.CollectedItems.Contains(item.itemName))
         {
-            ItemManager.CollectedItems.Add(item.itemName);
+            PlayerData.CollectedItems.Add(item.itemName);
             CollectItem();
             gameObject.SetActive(false); // Hide or disable the item
         }

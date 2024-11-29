@@ -13,10 +13,10 @@ public class DescriptionPanel : MonoBehaviour
     [SerializeField] private Button viewButton;
     [SerializeField] private SecretUI secretUI;
 
-    private void Start()
+    private void Awake()
     {
         viewButton.gameObject.SetActive(false);
-        Hide();   
+        Hide();
     }
 
     public void ShowPanel(Item item)

@@ -30,6 +30,7 @@ public class Draggable : MonoBehaviour, IClickable
         {
             Vector3 mousePosition = GetMouseWorldPosition();
             transform.position = mousePosition + offset;
+            PlayerData.LensPosition = transform.position;
         }
     }
 

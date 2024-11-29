@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.EventSystems;
 
 public class DescriptionPanel : MonoBehaviour
 {
@@ -12,6 +13,15 @@ public class DescriptionPanel : MonoBehaviour
     [SerializeField] private Image itemImage;
     [SerializeField] private Button viewButton;
     [SerializeField] private SecretUI secretUI;
+
+    private void Update()
+    {
+        // Example: Clear selection when the spacebar is pressed
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+    }
 
     private void Awake()
     {

@@ -10,8 +10,6 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Button viewButton;
     [SerializeField] private Button closeButton;
 
-    private Material blurMaterial;
-
     private void Awake()
     {
         inventoryUIPanel.SetActive(false);

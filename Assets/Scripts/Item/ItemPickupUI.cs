@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class ItemPickupUI : MonoBehaviour
 {
@@ -12,6 +13,15 @@ public class ItemPickupUI : MonoBehaviour
     [SerializeField] private Button collectButton;
     [SerializeField] private Button viewButton;
     [SerializeField] private SecretUI secretUI;
+
+    private void Update()
+    {
+        // Example: Clear selection when the spacebar is pressed
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+    }
 
     private void Awake()
     {

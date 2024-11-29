@@ -11,11 +11,14 @@ public class BasicTogglerButton : MonoBehaviour
     private void Awake()
     {
         button.onClick.AddListener(ToggleGO);
+        toggledGO.SetActive(PlayerData.IsLensToggled);
+        toggledGO.transform.position = PlayerData.LensPosition;
     }
 
     private void ToggleGO()
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.onClickSFX);
         toggledGO.SetActive(!toggledGO.activeSelf);
+        PlayerData.IsLensToggled = toggledGO.activeSelf;
     }
 }

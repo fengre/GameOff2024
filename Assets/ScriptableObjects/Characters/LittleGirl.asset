@@ -21,7 +21,7 @@ MonoBehaviour:
   secret: {fileID: 11400000, guid: aab0a7d937d187b4bb7a9788dbe35b5d, type: 2}
   initialDialogue:
   - Can you help me?
-  - "I lost my dolly and I can\u2019t find her anywhere. Please bring her back!"
+  - "I lost my dolly and I can\u2019t find her anywhere."
   postItemDialogue:
   - You found her! I looked everywhere for so long! Thank you so much!
   - 'I remembered so many fun things. '

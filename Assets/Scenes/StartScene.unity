@@ -297,8 +297,12 @@ PrefabInstance:
       value: Background
       objectReference: {fileID: 0}
     - target: {fileID: 5155513675169421323, guid: deee0ce7e0d8ceb408af0168948cfbc5, type: 3}
-      propertyPath: m_Sprite
-      value: 
+      propertyPath: m_Size.x
+      value: 38.399998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155513675169421323, guid: deee0ce7e0d8ceb408af0168948cfbc5, type: 3}
+      propertyPath: m_Size.y
+      value: 21.599998
       objectReference: {fileID: 0}
     - target: {fileID: 5155513675169421323, guid: deee0ce7e0d8ceb408af0168948cfbc5, type: 3}
       propertyPath: m_WasSpriteAssigned

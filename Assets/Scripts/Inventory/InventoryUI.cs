@@ -10,8 +10,6 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Button viewButton;
     [SerializeField] private Button closeButton;
 
-    private Material blurMaterial;
-
     private void Awake()
     {
         inventoryUIPanel.SetActive(false);
@@ -44,7 +42,7 @@ public class InventoryUI : MonoBehaviour
                 // Assign item to slot
                 Item currItem = Inventory.Instance.items[i];
                 inventorySlots[i].AssignItem(currItem);
-                Debug.Log(i + " assign item " + currItem.itemName);
+                inventorySlots[i].onSlotClicked = null;
                 inventorySlots[i].onSlotClicked += ShowDescriptionPanel;
             }
             else

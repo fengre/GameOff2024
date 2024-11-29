@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ClanLeader
   m_EditorClassIdentifier: 
   characterName: Clan Leader
-  idleImage: {fileID: 21300000, guid: da24ce434d5e08c40bc5826a041f2d82, type: 3}
-  speakingImage: {fileID: 21300000, guid: da24ce434d5e08c40bc5826a041f2d82, type: 3}
-  itemReceivedIdleImage: {fileID: 0}
-  itemReceivedSpeakingImage: {fileID: 0}
+  idleImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
+  speakingImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
+  itemReceivedIdleImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
+  itemReceivedSpeakingImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
   desiredItem: {fileID: 11400000, guid: 7afb9d270783065429aaa031e18cf354, type: 2}
   secret: {fileID: 11400000, guid: 5d6e0ca38b1547748b1dffc59fc6d53e, type: 2}
   initialDialogue:

@@ -28,14 +28,12 @@ public class ClickHandler : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("Lens"))
                     {
-                        Debug.Log("lens hit");
                         lensHit = true;
                     }
 
                     CharacterSprite character = hit.collider.GetComponent<CharacterSprite>();
                     if (character != null && lensHit)
                     {
-                        Debug.Log("character hit");
                         IClickable clickable = hit.collider.GetComponent<IClickable>();
                         clickable.OnClick();
                         return; // Stop after the first topmost clickable object

@@ -7,6 +7,7 @@ using System;
 
 public class DialogueUI : MonoBehaviour
 {
+    public event EventHandler NextDialogueEvent;
     public event EventHandler EndDialogueEvent;
 
     [SerializeField] private GameObject dialogueUIPanel;
@@ -78,8 +79,12 @@ public class DialogueUI : MonoBehaviour
 
     private void NextDialogue(bool showItemPickup)
     {
-        bool displayLine = dialogueManager.DisplayNextLine();
-        if (!displayLine)
+        int displayLine = dialogueManager.DisplayNextLine();
+        if (displayLine == 1)
+        {
+            NextDialogueEvent?.Invoke(this, EventArgs.Empty);
+        }
+        else if (displayLine == 0)
         {
             Hide();
             if (showItemPickup)

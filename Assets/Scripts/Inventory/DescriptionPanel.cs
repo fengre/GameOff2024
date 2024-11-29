@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.EventSystems;
 
 public class DescriptionPanel : MonoBehaviour
 {
@@ -13,10 +14,19 @@ public class DescriptionPanel : MonoBehaviour
     [SerializeField] private Button viewButton;
     [SerializeField] private SecretUI secretUI;
 
-    private void Start()
+    private void Update()
+    {
+        // Example: Clear selection when the spacebar is pressed
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+    }
+
+    private void Awake()
     {
         viewButton.gameObject.SetActive(false);
-        Hide();   
+        Hide();
     }
 
     public void ShowPanel(Item item)
@@ -30,7 +40,8 @@ public class DescriptionPanel : MonoBehaviour
         {
             Secret secret = item as Secret;
             viewButton.gameObject.SetActive(true);
-            viewButton.onClick.AddListener(() => ShowMemory(secret.secretImage));
+            viewButton.onClick.RemoveAllListeners();
+            viewButton.onClick.AddListener(() => ShowMemory(secret.secretImages));
         }
         else
         {
@@ -44,8 +55,8 @@ public class DescriptionPanel : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    public void ShowMemory(Sprite secretImage)
+    public void ShowMemory(Sprite[] secretImages)
     {
-        secretUI.ShowPanel(secretImage);
+        secretUI.ShowPanel(secretImages);
     }
 }

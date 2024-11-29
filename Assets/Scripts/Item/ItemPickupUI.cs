@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class ItemPickupUI : MonoBehaviour
 {
@@ -12,6 +13,15 @@ public class ItemPickupUI : MonoBehaviour
     [SerializeField] private Button collectButton;
     [SerializeField] private Button viewButton;
     [SerializeField] private SecretUI secretUI;
+
+    private void Update()
+    {
+        // Example: Clear selection when the spacebar is pressed
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+    }
 
     private void Awake()
     {
@@ -34,7 +44,8 @@ public class ItemPickupUI : MonoBehaviour
         {
             Secret secret = item as Secret;
             viewButton.gameObject.SetActive(true);
-            viewButton.onClick.AddListener(() => ShowMemory(secret.secretImage));
+            viewButton.onClick.RemoveAllListeners();
+            viewButton.onClick.AddListener(() => ShowMemory(secret.secretImages));
         }
         else
         {
@@ -42,8 +53,8 @@ public class ItemPickupUI : MonoBehaviour
         }
     }
 
-    public void ShowMemory(Sprite secretImage)
+    public void ShowMemory(Sprite[] secretImages)
     {
-        secretUI.ShowPanel(secretImage);
+        secretUI.ShowPanel(secretImages);
     }
 }

@@ -64,26 +64,24 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// Displays the next line in the queue.
     /// </summary>
-    public bool DisplayNextLine()
+    public int DisplayNextLine()
     {
         if (isTyping)
         {
             // If typing, skip to show the full line
             skipTyping = true;
-            return true;
+            return 2;
         }
 
         if (dialogueQueue.Count == 0)
         {
             EndDialogue();
-            return false;
+            return 0;
         }
 
         string nextLine = dialogueQueue.Dequeue();
 
         AudioClip nextClip = (audioQueue != null && audioQueue.Count > 0) ? audioQueue.Dequeue() : null;
-
-        Debug.Log(nextLine);
 
         if (nextClip != null)
         {
@@ -93,7 +91,7 @@ public class DialogueManager : MonoBehaviour
 
 
         StartCoroutine(TypeText(nextLine));
-        return true;
+        return 1;
     }
 
     /// <summary>

@@ -1318,7 +1318,7 @@ PrefabInstance:
     - target: {fileID: 3715991896932196563, guid: 1acf071fc724e0d43a5f537fbd28a3a8, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: 64072938cd8767c419155241961ab048, type: 2}
+      objectReference: {fileID: 11400000, guid: 809b4667e3f228b47925b4b5a48b0839, type: 2}
     - target: {fileID: 3715991896932196563, guid: 1acf071fc724e0d43a5f537fbd28a3a8, type: 3}
       propertyPath: dialogueUI
       value: 
@@ -1365,7 +1365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8778781228044730545, guid: 1acf071fc724e0d43a5f537fbd28a3a8, type: 3}
       propertyPath: m_Name
-      value: Fisherman
+      value: ClanLeader
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6620141571062156475, guid: 1acf071fc724e0d43a5f537fbd28a3a8, type: 3}

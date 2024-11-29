@@ -1489,7 +1489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8778781228044730545, guid: 1acf071fc724e0d43a5f537fbd28a3a8, type: 3}
       propertyPath: m_Name
-      value: Sister
+      value: LittleGirl
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6620141571062156475, guid: 1acf071fc724e0d43a5f537fbd28a3a8, type: 3}

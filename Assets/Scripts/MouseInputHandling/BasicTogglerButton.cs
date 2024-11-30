@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BasicTogglerButton : MonoBehaviour
 {
     [SerializeField] private Button button;
-    [SerializeField] private GameObject toggledGO;
+    public GameObject toggledGO;
 
     private void Awake()
     {

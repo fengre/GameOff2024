@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Ambient Sounds")]
     public AudioClip riverAmbientSound;
+    public AudioClip lensAmbientSound;
 
     [Header("SFX")]
     public AudioClip startButtonSFX;
@@ -117,6 +118,26 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(clip);
         }
     }
+
+    #region Lens Ambience
+    public void PlayLensAmbientSound()
+    {
+        if (ambientSource != null && lensAmbientSound != null)
+        {
+            ambientSource.clip = lensAmbientSound;
+            ambientSource.loop = true;
+            ambientSource.Play();
+        }
+    }
+
+    public void StopLensAmbientSound()
+    {
+        if (ambientSource != null && ambientSource.clip == lensAmbientSound)
+        {
+            ambientSource.Stop();
+        }
+    }
+    #endregion
 
     public void StopMusic()
     {

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Final_Woman
   m_EditorClassIdentifier: 
   characterName: Woman
-  idleImage: {fileID: 21300000, guid: 249d52dd36028d447a16ac63a4532126, type: 3}
-  speakingImage: {fileID: 21300000, guid: 94468a53a3111c74fa2cd95abe3525ab, type: 3}
-  itemReceivedIdleImage: {fileID: 21300000, guid: 249d52dd36028d447a16ac63a4532126, type: 3}
-  itemReceivedSpeakingImage: {fileID: 21300000, guid: 94468a53a3111c74fa2cd95abe3525ab, type: 3}
-  desiredItem: {fileID: 11400000, guid: ad7a46ae70a05c24186c33d4baf31b47, type: 2}
+  idleImage: {fileID: 0}
+  speakingImage: {fileID: 0}
+  itemReceivedIdleImage: {fileID: 0}
+  itemReceivedSpeakingImage: {fileID: 0}
+  desiredItem: {fileID: 0}
   secret: {fileID: 11400000, guid: f59935eda3a84354b81a3558c7d8ed4f, type: 2}
   initialDialogue:
   - "I thought I could save him... my baby. I placed him in a basket, hoping the
@@ -29,3 +29,5 @@ MonoBehaviour:
   - And now, all I have left is an empty town, and a question... did the river carry
     my baby to safety, or did it, too, take him?
   postItemDialogue: []
+  initialDialogueAudio: []
+  postItemDialogueAudio: []

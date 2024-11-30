@@ -18,7 +18,17 @@ public class BasicTogglerButton : MonoBehaviour
     private void ToggleGO()
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.onClickSFX);
+        bool isActive = !toggledGO.activeSelf;
         toggledGO.SetActive(!toggledGO.activeSelf);
         PlayerData.IsLensToggled = toggledGO.activeSelf;
+
+        if (isActive)
+        {
+            AudioManager.Instance.PlayLensAmbientSound();
+        }
+        else
+        {
+            AudioManager.Instance.StopLensAmbientSound();
+        }
     }
 }

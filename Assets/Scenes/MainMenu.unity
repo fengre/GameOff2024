@@ -4241,6 +4241,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1423540588}
+    - target: {fileID: 6845652092050573723, guid: 9b4758efba4292543af7bc2b1b45aa51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845652092050573723, guid: 9b4758efba4292543af7bc2b1b45aa51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BasePanelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7719735331526189611, guid: 9b4758efba4292543af7bc2b1b45aa51, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3005

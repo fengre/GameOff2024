@@ -924,9 +924,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f215874ecae65904d9931a0ed44c0fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1543628999 stripped
+--- !u!114 &1543628996 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8912739835028974784, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8260362730609036422, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
   m_PrefabInstance: {fileID: 1543628994}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1081,7 +1081,7 @@ PrefabInstance:
     - target: {fileID: 3344021259680696997, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: itemPickupUI
       value: 
-      objectReference: {fileID: 1543628999}
+      objectReference: {fileID: 1543628996}
     - target: {fileID: 5024624538894436626, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_Size.x
       value: 6.12

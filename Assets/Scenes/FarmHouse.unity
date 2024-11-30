@@ -225,7 +225,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
 --- !u!114 &90543663 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2490039268992235927, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8621086858139198912, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
   m_PrefabInstance: {fileID: 90543662}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -243,6 +243,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f215874ecae65904d9931a0ed44c0fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &90543665 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8260362730609036422, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
+  m_PrefabInstance: {fileID: 90543662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d82a3db81dcfa41b4b557b6a59e302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &295506848
@@ -695,17 +706,6 @@ Transform:
   - {fileID: 660614737}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1073117015 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8912739835028974784, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
-  m_PrefabInstance: {fileID: 90543662}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d82a3db81dcfa41b4b557b6a59e302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1155207757
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +991,7 @@ PrefabInstance:
     - target: {fileID: 3344021259680696997, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: itemPickupUI
       value: 
-      objectReference: {fileID: 1073117015}
+      objectReference: {fileID: 90543665}
     - target: {fileID: 5024624538894436626, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_Size.x
       value: 7.37

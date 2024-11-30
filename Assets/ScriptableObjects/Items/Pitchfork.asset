@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cf3a752b6796a46a0185f2d26e181d, type: 3}
   m_Name: Pitchfork
   m_EditorClassIdentifier: 
-  itemName: Pitchfork
-  itemIcon: {fileID: 21300000, guid: 6908de5c09e50ef45b0cf299a5f95022, type: 3}
-  description: An old farm tool with rusted tines, still sturdy enough to clear debris
-    or fend off trouble. Its worn handle holds years of toil and stories.
+  itemName: Sickle
+  itemIcon: {fileID: 21300000, guid: 05a4edc3fbccb6c4f8777779a3bda47d, type: 3}
+  description: An old farm tool with a rusted blade, still sturdy enough to clear
+    debris or fend off trouble. Its worn handle holds years of toil and stories.

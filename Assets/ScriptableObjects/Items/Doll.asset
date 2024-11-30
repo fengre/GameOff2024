@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Doll
   m_EditorClassIdentifier: 
   itemName: Doll
-  itemIcon: {fileID: 21300000, guid: 215d0066bfb386248adf2b1cbd020035, type: 3}
+  itemIcon: {fileID: 21300000, guid: 40c874dc071bc1a4cbab5d173aabe935, type: 3}
   description: A carefully crafted wooden doll, its painted features chipped with
     age. Despite the wear, it radiates the charm of something once deeply cherished.

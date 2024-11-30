@@ -305,7 +305,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1820, y: 980}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4849102325164600230
 CanvasRenderer:
@@ -374,15 +374,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3299763102574840472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 875, y: 460}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 875, y: -30}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7230065760096758084
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -571,7 +571,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemNameText: {fileID: 4493644979019140767}
   itemDescriptionText: {fileID: 7569266735358580981}
-  descriptionPanelGO: {fileID: 3227617347712232196}
   itemImage: {fileID: 6157255758443820146}
   viewButton: {fileID: 7861352716645737847}
   secretUI: {fileID: 0}

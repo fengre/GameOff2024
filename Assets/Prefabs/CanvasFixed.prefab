@@ -503,6 +503,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 223206053905089902}
     - target: {fileID: 794824068189981202, guid: 0d431182f86a4c840aab04577f5be030, type: 3}
+      propertyPath: itemPickupUI
+      value: 
+      objectReference: {fileID: 8260362730609036422}
+    - target: {fileID: 794824068189981202, guid: 0d431182f86a4c840aab04577f5be030, type: 3}
       propertyPath: basicTogglerButton
       value: 
       objectReference: {fileID: 2599035608292118077}

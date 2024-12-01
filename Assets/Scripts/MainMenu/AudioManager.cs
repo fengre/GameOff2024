@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Info")]
     public AudioClip mainMenuMusic;
     public AudioClip startSceneMusic;
+    public AudioClip endSceneMusic;
 
     [Header("Ambient Sounds")]
     public AudioClip riverAmbientSound;
@@ -23,6 +24,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip backpackOpenSFX;
     public AudioClip backpackCloseSFX;
     public AudioClip onClickSFX;
+    public AudioClip dialogueClickSFX;
+    public AudioClip viewSecretSFX;
 
     private const string MUSIC_VOLUME_KEY = "MusicVolume";
     private const string AMBIENT_VOLUME_KEY = "AmbientVolume";
@@ -91,6 +94,9 @@ public class AudioManager : MonoBehaviour
             case "River":
             case "Lake":
                 selectedAmbient = riverAmbientSound;
+                break;
+            case "EndScene":
+                selectedMusic = endSceneMusic;
                 break;
         }
 

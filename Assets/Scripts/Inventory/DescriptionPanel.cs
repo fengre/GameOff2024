@@ -57,6 +57,7 @@ public class DescriptionPanel : MonoBehaviour
 
     public void ShowMemory(Sprite[] secretImages)
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.viewSecretSFX);
         secretUI.ShowPanel(secretImages);
     }
 }

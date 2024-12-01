@@ -379,6 +379,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8526850886151188352, guid: 5db3d4b160ba7154a81649cb937f3ba0, type: 3}
+      propertyPath: endSceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: b1ed75d531ee31f4e9e2a55fd78db516, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -691,6 +695,10 @@ PrefabInstance:
       propertyPath: toggledGO
       value: 
       objectReference: {fileID: 6131209738353012201}
+    - target: {fileID: 4308225804853719428, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6739274802300616228, guid: 76a204833c49e494d828bb903302fcd9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1

@@ -55,6 +55,7 @@ public class ItemPickupUI : MonoBehaviour
 
     public void ShowMemory(Sprite[] secretImages)
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.viewSecretSFX);
         secretUI.ShowPanel(secretImages);
     }
 }

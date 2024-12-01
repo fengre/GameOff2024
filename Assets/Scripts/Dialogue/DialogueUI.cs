@@ -82,6 +82,8 @@ public class DialogueUI : MonoBehaviour
 
     private void NextDialogue(bool showItemPickup)
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.dialogueClickSFX);
+
         int displayLine = dialogueManager.DisplayNextLine();
         if (displayLine == 1)
         {

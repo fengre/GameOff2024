@@ -33,19 +33,14 @@ public class DialogueManager : MonoBehaviour
     /// <param name="lines">Array of dialogue lines to display.</param>
     public void StartDialogue(string[] lines, AudioClip[] audioClips)
     {
-        Debug.Log("starting dialog");
-        Debug.Log("dialogueQueue is null? " + (dialogueQueue == null));
-        Debug.Log("audioQueue is null? " + (audioQueue == null));
         dialogueQueue.Clear();
         audioQueue.Clear();
 
-        Debug.Log("lines.Length: " + lines.Length);
         foreach (string line in lines)
         {
             dialogueQueue.Enqueue(line);
         }
 
-        Debug.Log("audioClips.Length: " + audioClips.Length);
         if (audioClips != null)
         {
             //Fill audioQueue with clips or nulls to match the number of dialogue lines
@@ -63,7 +58,6 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        Debug.Log("display next line");
         DisplayNextLine();
     }
 
@@ -95,7 +89,6 @@ public class DialogueManager : MonoBehaviour
             audioSource.Play();
         }
 
-        Debug.Log("Starting dialogue coroutine...");
         StartCoroutine(TypeText(nextLine));
         return 1;
     }
@@ -124,9 +117,7 @@ public class DialogueManager : MonoBehaviour
                 audioSource.PlayOneShot(typingSound);
             }
 
-            Debug.Log("Dialogue Coroutine Started.");
             yield return new WaitForSeconds(typingSpeed);
-            Debug.Log("Dialogue Coroutine Executed.");
         }
 
         isTyping = false;

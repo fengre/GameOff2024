@@ -165,4 +165,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverScaleMultiplier: 1.2
-  transitionSpeed: 2
+  transitionSpeed: 10

@@ -6,39 +6,38 @@ using TMPro;
 
 public class SecretTree : MonoBehaviour
 {
-    [Header("Glow info")]
-    public Image circleImage;
-    public Color glowColor;
-    private Color originalColor;
-    public float glowDuration;
-    public float fadeSpeed;
-
     [Header("Counter info")]
-    public TMP_Text counterText;
     private static int clickCount = 0;
-    private bool isAnimating = false;
     private const int maxSecrets = 5;
 
     public GameObject endGameButton;
 
     [Header("Secrets")]
-    public List<Item> secretItems; 
+    public List<Item> secretItems;
+
+    [Header("Tree Secret Images")]
+    public Image greenSecretImage;
+    public Image purpleSecretImage;
+    public Image redSecretImage;
+    public Image whiteSecretImage;
+    public Image yellowSecretImage;
 
     public void Start()
     {
-        originalColor = circleImage.color;
-        UpdateCounterText();
-
         if(endGameButton != null)
         {
             endGameButton.SetActive(false);
+        }
+
+        foreach (string color in PlayerData.PlacedSecrets)
+        {
+            ActivateColorImage(color);
         }
     }
 
     public void OnTreeClicked()
     {
-        //Check if animating, if true ignore clicks
-        if(isAnimating || clickCount >= maxSecrets)
+        if(clickCount >= maxSecrets)
         {
             return;
         }
@@ -46,17 +45,25 @@ public class SecretTree : MonoBehaviour
         Item secret = GetAvailableSecret();
         if(secret != null)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.collectSFX);
             Inventory.Instance.RemoveItem(secret);
             Debug.Log("Secret offered to tree.");
 
-            StartCoroutine(GlowEffect());
+            ActivateColorImage(secret.color);
+            PlayerData.PlacedSecrets.Add(secret.color);
 
             clickCount++;
-            UpdateCounterText();
 
-            if(clickCount >= maxSecrets && endGameButton != null)
+            if(clickCount >= maxSecrets)
             {
-                endGameButton.SetActive(true);
+                if (SceneManagement.Instance != null)
+                {
+                    SceneManagement.Instance.LoadSceneByName("EndScene");
+                }
+                else
+                {
+                    Debug.LogWarning("SceneManagement instance not found!");
+                }
             }
         }
         else
@@ -77,41 +84,31 @@ public class SecretTree : MonoBehaviour
         return null;
     }
 
-    private IEnumerator GlowEffect()
+    private void ActivateColorImage(string color)
     {
-        isAnimating = true;
 
-        //Glow fades out
-        float timer = 0f;
-        while (timer < glowDuration / 2)
+        switch (color.ToLower())
         {
-            timer += Time.deltaTime * fadeSpeed;
-            float alpha = Mathf.Lerp(glowColor.a, originalColor.a, timer / (glowDuration / 2));
-            circleImage.color = new Color(glowColor.r, glowColor.g, glowColor.b, alpha);
-            yield return null;
+            case "green":
+                greenSecretImage.gameObject.SetActive(true);
+                break;
+            case "purple":
+                purpleSecretImage.gameObject.SetActive(true);
+                break;
+            case "red":
+                redSecretImage.gameObject.SetActive(true);
+                break;
+            case "white":
+                whiteSecretImage.gameObject.SetActive(true);
+                break;
+            case "yellow":
+                yellowSecretImage.gameObject.SetActive(true);
+                break;
+            default:
+                Debug.LogWarning($"No image assigned for color: {color}");
+                break;
         }
-
-        //Glow fades in
-        timer = 0f;
-        while(timer < glowDuration / 2)
-        {
-            timer += Time.deltaTime * fadeSpeed;
-            float alpha = Mathf.Lerp(originalColor.a, glowColor.a, timer / (glowDuration / 2));
-            circleImage.color = new Color(glowColor.r, glowColor.g, glowColor.b, alpha);
-            yield return null;
-        }
-
-        //Make sure color is set back to original
-        circleImage.color = originalColor;
-        isAnimating = false;
     }
 
-    private void UpdateCounterText()
-    {
-        if(counterText != null)
-        {
-            counterText.text = "Secrets received: " + clickCount;
-        }
-    }
 }
 

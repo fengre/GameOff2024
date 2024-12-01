@@ -22,6 +22,10 @@ public class SecretTree : MonoBehaviour
     public Image whiteSecretImage;
     public Image yellowSecretImage;
 
+    [Header("Fade Settings")]
+    public Image fadeImage;
+    public float fadeDuration = 2.0f;
+
     public void Start()
     {
         if(endGameButton != null)
@@ -56,20 +60,35 @@ public class SecretTree : MonoBehaviour
 
             if(clickCount >= maxSecrets)
             {
-                if (SceneManagement.Instance != null)
-                {
-                    SceneManagement.Instance.LoadSceneByName("EndScene");
-                }
-                else
-                {
-                    Debug.LogWarning("SceneManagement instance not found!");
-                }
+                StartCoroutine(FadeAndLoadScene("EndScene"));
             }
         }
         else
         {
             Debug.Log("No secrets in inventory");
         }
+    }
+
+    private IEnumerator FadeAndLoadScene(string sceneName)
+    {
+        if (fadeImage != null)
+        {
+            fadeImage.gameObject.SetActive(true);
+            Color fadeColor = fadeImage.color;
+            fadeColor.a = 0f;
+            fadeImage.color = fadeColor;
+
+            float timer = 0f;
+            while (timer < fadeDuration)
+            {
+                timer += Time.deltaTime;
+                fadeColor.a = Mathf.Lerp(0f, 1f, timer / fadeDuration);
+                fadeImage.color = fadeColor;
+                yield return null;
+            }
+        }
+
+        SceneManagement.Instance.LoadSceneByName(sceneName);
     }
 
     private Item GetAvailableSecret()

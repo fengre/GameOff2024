@@ -15,35 +15,26 @@ public class ItemPickupUI : MonoBehaviour
     [SerializeField] private SecretUI secretUI;
     private bool isCollecting = false;
 
-    private void Update()
-    {
-        // Example: Clear selection when the spacebar is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            EventSystem.current.SetSelectedGameObject(null);
-        }
-    }
-
     private void Awake()
-{
-    collectButton.onClick.AddListener(() =>
     {
-        isCollecting = true; // Set the flag
+        collectButton.onClick.AddListener(() =>
+        {
+            isCollecting = true; // Set the flag
+            Hide();
+        });
         Hide();
-    });
-    Hide();
-}
+    }
 
     private void Hide()
-{
-    if (isCollecting)
     {
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.collectSFX);
-        isCollecting = false;
+        if (isCollecting)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.collectSFX);
+            isCollecting = false;
+        }
+        
+        itemPickupUIPanel.SetActive(false);
     }
-    
-    itemPickupUIPanel.SetActive(false);
-}
 
     public void ShowPanel(Item item)
     {

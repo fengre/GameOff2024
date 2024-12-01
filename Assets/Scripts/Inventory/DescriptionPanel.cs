@@ -14,15 +14,6 @@ public class DescriptionPanel : MonoBehaviour
     [SerializeField] private Button viewButton;
     [SerializeField] private SecretUI secretUI;
 
-    private void Update()
-    {
-        // Example: Clear selection when the spacebar is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            EventSystem.current.SetSelectedGameObject(null);
-        }
-    }
-
     private void Awake()
     {
         viewButton.gameObject.SetActive(false);

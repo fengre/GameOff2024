@@ -2431,6 +2431,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenPortfolio
       objectReference: {fileID: 0}
+    - target: {fileID: 1771162672204220341, guid: a5719c76d93995c42a8bff3a31fcf259, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: https://soundcloud.com/zhiyun-zhang
+      objectReference: {fileID: 0}
     - target: {fileID: 3681096753854991043, guid: a5719c76d93995c42a8bff3a31fcf259, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1

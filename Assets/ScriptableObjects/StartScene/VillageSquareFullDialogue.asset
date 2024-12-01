@@ -20,9 +20,10 @@ MonoBehaviour:
   desiredItem: {fileID: 0}
   secret: {fileID: 0}
   initialDialogue:
-  - "You see me now, don\u2019t you?"
-  - That lens helps you see us.
-  - We are here for a reason. If you stick around, you might find out our secrets.
-  - Can you help me first?
-  - "I lost my dolly and I can\u2019t find her anywhere. Please bring her back!"
+  - You can see me now, can't you?
+  - That lens must be helping you. No one has seen us for years...
+  - We're all stuck here, a never ending limbo. Can you help us?
+  - "I lost my dolly and I can\u2019t find her anywhere. Please help me find her..."
   postItemDialogue: []
+  initialDialogueAudio: []
+  postItemDialogueAudio: []

@@ -20,9 +20,9 @@ MonoBehaviour:
   desiredItem: {fileID: 0}
   secret: {fileID: 0}
   initialDialogue:
-  - I swear I just saw a little girl.
-  - Oh, what's this? On the ground?
-  - Looks like... a lens. Huh. Let me try it on.
+  - Where could she have gone...
+  - Oh, what's this on the ground?
+  - Looks like... a lens. Huh, let me try it on.
   postItemDialogue: []
   initialDialogueAudio: []
   postItemDialogueAudio: []

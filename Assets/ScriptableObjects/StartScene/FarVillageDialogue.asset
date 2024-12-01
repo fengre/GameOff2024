@@ -21,13 +21,10 @@ MonoBehaviour:
   secret: {fileID: 0}
   initialDialogue:
   - A village... here? I wasn't expecting to see anything for miles.
-  - It looks abandoned. The houses, the streets... not a soul in sight. Strange.
-  - "Wait\u2026 could this be the place from the stories?"
-  - "The village where no one knows what happened. They say the people went mad...
-    tore each other apart. Everything\u2026 gone."
-  - "But that was just a legend\u2026 wasn\u2019t it?"
-  - "Wait\u2026 no. That\u2019s not possible."
-  - A little girl?
+  - It looks abandoned. The houses, the streets... empty. Could this be the place
+    from the stories?
+  - The village where everyone went mad and disappeaered? No, it's just a legend...
+  - Wait, was that-? A little girl?! That's not possible!
   postItemDialogue: []
   initialDialogueAudio: []
   postItemDialogueAudio: []

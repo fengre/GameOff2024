@@ -20,6 +20,8 @@ MonoBehaviour:
   desiredItem: {fileID: 0}
   secret: {fileID: 0}
   initialDialogue:
-  - These... these people, are they... ghosts? What happened to them?
-  - And... the little girl!
+  - Are those... GHOSTS? What happened here...
+  - And the little girl!
   postItemDialogue: []
+  initialDialogueAudio: []
+  postItemDialogueAudio: []

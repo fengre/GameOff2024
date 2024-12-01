@@ -63,6 +63,14 @@ public class EndScene : MonoBehaviour
                 motherSisterImage.gameObject.SetActive(true);
 
                 Character c = characters[index];
+
+                string[] modifiedDialogue = c.initialDialogue;
+                if (modifiedDialogue.Length > 0)
+                {
+                    int lastLineIndex = modifiedDialogue.Length - 1;
+                    modifiedDialogue[lastLineIndex] += $", {PlayerData.playerName}.";
+                }
+
                 dialogueUI.ShowPanel(c, false, false);
             }
         }
@@ -74,7 +82,7 @@ public class EndScene : MonoBehaviour
 
     private IEnumerator FadeOutImage()
     {
-        float duration = 2f;
+        float duration = 2.5f;
         float elapsedTime = 0f;
 
         Color startColor = motherSisterImage.color;

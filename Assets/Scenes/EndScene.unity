@@ -563,6 +563,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0765268a21ac81498c93161d86b3249, type: 2}
   - {fileID: 11400000, guid: a995219caefff614eb497a6f935f7d22, type: 2}
   - {fileID: 11400000, guid: d81d7a684291b834eb46961e15a9b127, type: 2}
+  endingText: {fileID: 640702265}
+  blackPanel: {fileID: 1288813183}
 --- !u!1 &671591556
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,6 +41,15 @@ public class ItemPickupUI : MonoBehaviour
         itemNameText.text = item.itemName;
         itemImage.sprite = item.itemIcon;
         itemPickupUIPanel.SetActive(true);
+
+        if (AudioManager.Instance != null)
+        {
+            AudioClip itemSFX = AudioManager.Instance.GetItemPickupSFX(item.itemName);
+            if (itemSFX != null)
+            {
+                AudioManager.Instance.PlaySFX(itemSFX);
+            }
+        }
         
         if (item is Secret)
         {

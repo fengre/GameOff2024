@@ -27,6 +27,15 @@ public class AudioManager : MonoBehaviour
     public AudioClip dialogueClickSFX;
     public AudioClip viewSecretSFX;
     public AudioClip collectSFX;
+    public AudioClip dollSFX;
+    public AudioClip fishingPoleSFX;
+    public AudioClip ringSFX;
+    public AudioClip sickleSFX;
+    public AudioClip rattleSFX;
+
+    [Header("Item Pickup SFX")]
+    public List<AudioClip> itemPickupSFX;
+    private Dictionary<string, AudioClip> itemPickupSFXMap; 
 
     private const string MUSIC_VOLUME_KEY = "MusicVolume";
     private const string AMBIENT_VOLUME_KEY = "AmbientVolume";
@@ -65,6 +74,15 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        itemPickupSFXMap = new Dictionary<string, AudioClip>
+        {
+            { "Doll", dollSFX },
+            { "FishingPole", fishingPoleSFX },
+            { "Rattle", rattleSFX },
+            { "Ring", ringSFX },
+            { "Sickle", sickleSFX }
+        };
+
         PlayMusicForCurrentScene();
     }
     private void OnDestroy()
@@ -126,14 +144,29 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public AudioClip GetItemPickupSFX(string itemName)
+    {
+        if (itemPickupSFXMap.TryGetValue(itemName, out AudioClip sfx))
+        {
+            return sfx;
+        }
+        return null;
+    }
+
     #region Lens Ambience
     public void PlayLensAmbientSound()
     {
-        if (ambientSource != null && lensAmbientSound != null)
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "VillageSquare" && ambientSource != null && lensAmbientSound != null)
         {
             ambientSource.clip = lensAmbientSound;
             ambientSource.loop = true;
             ambientSource.Play();
+        }
+        else
+        {
+            Debug.Log("Lens ambient sound can only play in the VillageSquare scene.");
         }
     }
 

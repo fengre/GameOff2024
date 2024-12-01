@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ClanLeader
   m_EditorClassIdentifier: 
   characterName: Clan Leader
-  idleImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
-  speakingImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
-  itemReceivedIdleImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
-  itemReceivedSpeakingImage: {fileID: 21300000, guid: 1936a228cc3fcff42be9ff137c5c676b, type: 3}
+  idleImage: {fileID: 21300000, guid: f9e46ba470c78574eb5a2f4102c66d3d, type: 3}
+  speakingImage: {fileID: 21300000, guid: 61c86d02be2c3c74c8b795dc970e8b50, type: 3}
+  itemReceivedIdleImage: {fileID: 21300000, guid: 61c86d02be2c3c74c8b795dc970e8b50, type: 3}
+  itemReceivedSpeakingImage: {fileID: 21300000, guid: 61c86d02be2c3c74c8b795dc970e8b50, type: 3}
   desiredItem: {fileID: 11400000, guid: 7afb9d270783065429aaa031e18cf354, type: 2}
   secret: {fileID: 11400000, guid: 5d6e0ca38b1547748b1dffc59fc6d53e, type: 2}
   initialDialogue:
@@ -29,4 +29,7 @@ MonoBehaviour:
   initialDialogueAudio:
   - {fileID: 8300000, guid: 2e126712045e57a408af74ec45b2fdac, type: 3}
   - {fileID: 8300000, guid: 186fc7c8bfafee2408d9b2429e90cb03, type: 3}
-  postItemDialogueAudio: []
+  postItemDialogueAudio:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 6449f502ef85f2348a7ec19aa26c74a7, type: 3}
+  - {fileID: 8300000, guid: 5541d66e04ad52d4ea53f755171698f3, type: 3}

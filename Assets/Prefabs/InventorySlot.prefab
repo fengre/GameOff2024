@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 7253248022038564668}
   - component: {fileID: 3187112446702847996}
   - component: {fileID: 9029593391366451171}
+  - component: {fileID: 1877365085408534751}
   m_Layer: 5
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -136,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.88235295}
+  m_Color: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -211,3 +212,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 3356660369159713107}
   slotButton: {fileID: 3187112446702847996}
+  outline: {fileID: 1877365085408534751}
+  currentItem: {fileID: 0}
+--- !u!114 &1877365085408534751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789486570508449356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1

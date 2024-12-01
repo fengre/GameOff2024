@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2651610494553383153}
   - component: {fileID: 2822063491113330837}
   - component: {fileID: 6246161674720885311}
+  - component: {fileID: 4645750549343965052}
   m_Layer: 5
   m_Name: LensButton
   m_TagString: Untagged
@@ -135,3 +136,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 2822063491113330837}
   toggledGO: {fileID: 0}
+--- !u!114 &4645750549343965052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143046439446165250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97345533fe077fa429a756e16e352cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverScaleMultiplier: 1.2
+  transitionSpeed: 2

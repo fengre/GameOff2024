@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1898003715321608804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1231.0414, y: 201.046, z: -3.9385629}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,8 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuMusic: {fileID: 8300000, guid: 01bc2760ccdac5b42bb0a40887be70e3, type: 3}
   startSceneMusic: {fileID: 8300000, guid: 0564395a05de5c64bb3a5b434bd1ae82, type: 3}
+  endSceneMusic: {fileID: 0}
   riverAmbientSound: {fileID: 8300000, guid: fced5578e3bc5ad439fb53ed479da22a, type: 3}
+  lensAmbientSound: {fileID: 0}
   startButtonSFX: {fileID: 8300000, guid: 1dc7790bdf9da984a9a472092221f464, type: 3}
   backpackOpenSFX: {fileID: 8300000, guid: f10e6d24a495222419bd79fd3718e3d4, type: 3}
   backpackCloseSFX: {fileID: 8300000, guid: a926f85d60e2e0442ae8957b153bb962, type: 3}
   onClickSFX: {fileID: 8300000, guid: e66d7a64d81bbb94dbb17e356fa82542, type: 3}
+  dialogueClickSFX: {fileID: 0}
+  viewSecretSFX: {fileID: 0}
+  collectSFX: {fileID: 0}

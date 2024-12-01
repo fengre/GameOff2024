@@ -44,6 +44,8 @@ public class InventoryUI : MonoBehaviour
                 inventorySlots[i].AssignItem(currItem);
                 inventorySlots[i].onSlotClicked = null;
                 inventorySlots[i].onSlotClicked += ShowDescriptionPanel;
+                inventorySlots[i].onSlotClicked += AddOutline;
+                inventorySlots[i].onSlotClicked += RemoveOutline;
             }
             else
             {
@@ -57,6 +59,29 @@ public class InventoryUI : MonoBehaviour
     {
         // Show the description panel and update its contents
         descriptionPanel.ShowPanel(item);
+    }
+
+    private void AddOutline(Item item)
+    {
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            if (inventorySlots[i].currentItem == item)
+            {
+                inventorySlots[i].AddOutline();
+                return;
+            }
+        }
+    }
+
+    private void RemoveOutline(Item item)
+    {
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            if (inventorySlots[i].currentItem != item)
+            {
+                inventorySlots[i].RemoveOutline();
+            }
+        }
     }
 
     private void ShowPanel()

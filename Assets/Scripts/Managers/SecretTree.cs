@@ -6,8 +6,9 @@ using TMPro;
 
 public class SecretTree : MonoBehaviour
 {
+public static SecretTree Instance {get; private set;}
+
     [Header("Counter info")]
-    private static int clickCount = 0;
     private const int maxSecrets = 5;
 
     public GameObject endGameButton;
@@ -26,6 +27,14 @@ public class SecretTree : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 2.0f;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     public void Start()
     {
         if(endGameButton != null)
@@ -41,11 +50,6 @@ public class SecretTree : MonoBehaviour
 
     public void OnTreeClicked()
     {
-        if(clickCount >= maxSecrets)
-        {
-            return;
-        }
-
         Item secret = GetAvailableSecret();
         if(secret != null)
         {
@@ -56,9 +60,7 @@ public class SecretTree : MonoBehaviour
             ActivateColorImage(secret.color);
             PlayerData.PlacedSecrets.Add(secret.color);
 
-            clickCount++;
-
-            if(clickCount >= maxSecrets)
+            if (AreAllSecretsActive())
             {
                 StartCoroutine(FadeAndLoadScene("EndScene"));
             }
@@ -129,5 +131,26 @@ public class SecretTree : MonoBehaviour
         }
     }
 
+    private bool AreAllSecretsActive()
+    {
+        return greenSecretImage.gameObject.activeSelf &&
+            purpleSecretImage.gameObject.activeSelf &&
+            redSecretImage.gameObject.activeSelf &&
+            whiteSecretImage.gameObject.activeSelf &&
+            yellowSecretImage.gameObject.activeSelf;
+    }
+
+    public void ResetTree()
+    {
+        greenSecretImage.gameObject.SetActive(false);
+        purpleSecretImage.gameObject.SetActive(false);
+        redSecretImage.gameObject.SetActive(false);
+        whiteSecretImage.gameObject.SetActive(false);
+        yellowSecretImage.gameObject.SetActive(false);
+
+        PlayerData.PlacedSecrets.Clear();
+
+        Debug.Log("Tree has been reset.");
+    }
 }
 

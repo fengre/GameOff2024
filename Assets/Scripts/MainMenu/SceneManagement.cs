@@ -22,6 +22,8 @@ public class SceneManagement : MonoBehaviour
         }
     }
 
+   
+
     public void StartGame()
     {
         StartCoroutine(TransitionToScene("StartScene"));
@@ -62,8 +64,12 @@ public class SceneManagement : MonoBehaviour
     {
         //Update more logic later
         PlayerData.playerName = "";
-        SceneManager.LoadScene("MainMenu");
+        PlayerData.CollectedItems.Clear();
+        PlayerData.LensPosition = Vector3.zero;
+        PlayerData.PlacedSecrets.Clear();
 
+        SceneManager.LoadScene("MainMenu");
         Destroy(gameObject);
     }
+
 }

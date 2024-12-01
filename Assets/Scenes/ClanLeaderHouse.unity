@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 5024624538894436626, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 686a8d3d34623e641bf9adccda68d78c, type: 3}
+      objectReference: {fileID: 21300000, guid: 67e2c4193c91a8a45ad2c003efb8aba1, type: 3}
     - target: {fileID: 5024624538894436626, guid: e7324f46e8f9f1a42b24afd9a305c524, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -1683,7 +1683,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5f8a4af7cf1367744aa9c9c9d98fdc32, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5ed305d5aaa6674dbc3dc43ebff7c14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

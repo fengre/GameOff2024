@@ -30,6 +30,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 13030ea9408d86d4e8e26d194b0d0d13, type: 3}
   - {fileID: 8300000, guid: b889aa82d02ba5e4ab0c9776ed3ff0cd, type: 3}
   postItemDialogueAudio:
-  - {fileID: 8300000, guid: 32c1f225bf240dd42b16a316d7709200, type: 3}
+  - {fileID: 8300000, guid: e6788ab54bd39144d81fef0cc0f0436b, type: 3}
   - {fileID: 8300000, guid: df6f53e34d21e73469628eacd285a578, type: 3}
-  - {fileID: 8300000, guid: f0f6583623467924199690a25e1420c4, type: 3}
+  - {fileID: 8300000, guid: 3813c4d7974e43842985932de328de61, type: 3}

@@ -22,7 +22,7 @@ MonoBehaviour:
   initialDialogue:
   - "This mess won\u2019t clear itself... "
   postItemDialogue:
-  - Ah, my old pitchfork!
+  - Ah, my old sickle!
   - "A bit rusted, but it\u2019ll do. Time to set things right."
   initialDialogueAudio:
   - {fileID: 8300000, guid: 0c115de17aafb424886d926ec4739acb, type: 3}

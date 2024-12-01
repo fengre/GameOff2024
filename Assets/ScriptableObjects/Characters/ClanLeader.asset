@@ -26,5 +26,7 @@ MonoBehaviour:
   - "Ah, there it is\u2014the emblem of our clan!"
   - It still fits perfectly, as if time never passed.
   - You've done me a great honor.
-  initialDialogueAudio: []
+  initialDialogueAudio:
+  - {fileID: 8300000, guid: 2e126712045e57a408af74ec45b2fdac, type: 3}
+  - {fileID: 8300000, guid: 186fc7c8bfafee2408d9b2429e90cb03, type: 3}
   postItemDialogueAudio: []

@@ -24,5 +24,6 @@ MonoBehaviour:
   postItemDialogue:
   - Ah, my old pitchfork!
   - "A bit rusted, but it\u2019ll do. Time to set things right."
-  initialDialogueAudio: []
+  initialDialogueAudio:
+  - {fileID: 8300000, guid: 0c115de17aafb424886d926ec4739acb, type: 3}
   postItemDialogueAudio: []

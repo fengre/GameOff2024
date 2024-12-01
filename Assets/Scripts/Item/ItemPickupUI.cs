@@ -13,6 +13,7 @@ public class ItemPickupUI : MonoBehaviour
     [SerializeField] private Button collectButton;
     [SerializeField] private Button viewButton;
     [SerializeField] private SecretUI secretUI;
+    private bool isCollecting = false;
 
     private void Update()
     {
@@ -24,15 +25,25 @@ public class ItemPickupUI : MonoBehaviour
     }
 
     private void Awake()
+{
+    collectButton.onClick.AddListener(() =>
     {
-        collectButton.onClick.AddListener(Hide);
+        isCollecting = true; // Set the flag
         Hide();
-    }
+    });
+    Hide();
+}
 
     private void Hide()
+{
+    if (isCollecting)
     {
-        itemPickupUIPanel.SetActive(false);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.collectSFX);
+        isCollecting = false;
     }
+    
+    itemPickupUIPanel.SetActive(false);
+}
 
     public void ShowPanel(Item item)
     {

@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip onClickSFX;
     public AudioClip dialogueClickSFX;
     public AudioClip viewSecretSFX;
+    public AudioClip collectSFX;
 
     private const string MUSIC_VOLUME_KEY = "MusicVolume";
     private const string AMBIENT_VOLUME_KEY = "AmbientVolume";

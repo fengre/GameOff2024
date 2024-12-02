@@ -53,7 +53,7 @@ public static SecretTree Instance {get; private set;}
         Item secret = GetAvailableSecret();
         if(secret != null)
         {
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.collectSFX);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.secretsClickSFX);
             Inventory.Instance.RemoveItem(secret);
             Debug.Log("Secret offered to tree.");
 

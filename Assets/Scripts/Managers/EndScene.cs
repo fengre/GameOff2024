@@ -13,6 +13,7 @@ public class EndScene : MonoBehaviour
     public Image secretImage;
     public Image treeImage;
     public Image motherSisterImage;
+    public Image endImage;
     public Character[] characters;
 
     private int index = 0;
@@ -99,6 +100,7 @@ public class EndScene : MonoBehaviour
         motherSisterImage.gameObject.SetActive(false);
 
         replayButton.SetActive(true);
+        endImage.gameObject.SetActive(true);
     }
 
     public void ReplayPressed()

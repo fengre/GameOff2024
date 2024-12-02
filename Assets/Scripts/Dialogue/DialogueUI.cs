@@ -55,9 +55,6 @@ public class DialogueUI : MonoBehaviour
         characterNameText.text = character.characterName;
 
         var (dialogue, audioClips) = character.GetDialogueAndAudio(hasReceivedItem);
-        Debug.Log("dialogue is null? " + (dialogue == null));
-        Debug.Log("audio clips is null? " + (audioClips == null));
-        Debug.Log("dialogue manager is null? " + (dialogueManager == null));
         dialogueManager.StartDialogue(dialogue, audioClips);
         
         if (hasReceivedItem && firstShow)

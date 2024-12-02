@@ -11,6 +11,10 @@ public class CharacterSprite : MonoBehaviour, IClickable
     private void Awake()
     {
         dialogueUI.EndDialogueEvent += DialogueUI_EndDialogueEvent;
+        if (PlayerData.CollectedSecrets.Contains(character.characterName))
+        {
+            hasReceivedItem = true;
+        }
     }
 
     private void DialogueUI_EndDialogueEvent(object sender, System.EventArgs e)
@@ -48,6 +52,7 @@ public class CharacterSprite : MonoBehaviour, IClickable
     private void GiveItem()
     {
         hasReceivedItem = true;
+        PlayerData.CollectedSecrets.Add(character.characterName);    
         Inventory.Instance.RemoveItem(character.desiredItem);
     }
 

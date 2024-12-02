@@ -66,7 +66,9 @@ public class SceneManagement : MonoBehaviour
         PlayerData.playerName = "";
         PlayerData.CollectedItems.Clear();
         PlayerData.LensPosition = Vector3.zero;
+        PlayerData.IsLensToggled = false;
         PlayerData.PlacedSecrets.Clear();
+        PlayerData.CollectedSecrets.Clear();
 
         SceneManager.LoadScene("MainMenu");
         Destroy(gameObject);

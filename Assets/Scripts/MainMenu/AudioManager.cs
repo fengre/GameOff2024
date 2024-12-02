@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip dialogueClickSFX;
     public AudioClip viewSecretSFX;
     public AudioClip collectSFX;
+    public AudioClip secretsClickSFX;
     public AudioClip dollSFX;
     public AudioClip fishingPoleSFX;
     public AudioClip ringSFX;

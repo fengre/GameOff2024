@@ -46,13 +46,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuMusic: {fileID: 8300000, guid: 01bc2760ccdac5b42bb0a40887be70e3, type: 3}
   startSceneMusic: {fileID: 8300000, guid: 0564395a05de5c64bb3a5b434bd1ae82, type: 3}
-  endSceneMusic: {fileID: 0}
+  endSceneMusic: {fileID: 8300000, guid: 2f30b9819e33d034a8171910baba5789, type: 3}
   riverAmbientSound: {fileID: 8300000, guid: fced5578e3bc5ad439fb53ed479da22a, type: 3}
-  lensAmbientSound: {fileID: 0}
+  lensAmbientSound: {fileID: 8300000, guid: 0c298a2ee076cec4f9bcb0b6ed87fd04, type: 3}
   startButtonSFX: {fileID: 8300000, guid: 1dc7790bdf9da984a9a472092221f464, type: 3}
   backpackOpenSFX: {fileID: 8300000, guid: f10e6d24a495222419bd79fd3718e3d4, type: 3}
   backpackCloseSFX: {fileID: 8300000, guid: a926f85d60e2e0442ae8957b153bb962, type: 3}
   onClickSFX: {fileID: 8300000, guid: e66d7a64d81bbb94dbb17e356fa82542, type: 3}
-  dialogueClickSFX: {fileID: 0}
-  viewSecretSFX: {fileID: 0}
-  collectSFX: {fileID: 0}
+  dialogueClickSFX: {fileID: 8300000, guid: b1ed75d531ee31f4e9e2a55fd78db516, type: 3}
+  viewSecretSFX: {fileID: 8300000, guid: 6cad2e912978aad4b9ea76971769762d, type: 3}
+  collectSFX: {fileID: 8300000, guid: f175ec5667b04c44f9fc448e69e58fdf, type: 3}
+  secretsClickSFX: {fileID: 8300000, guid: 524ea219760d75644bc803a6e64b5602, type: 3}
+  dollSFX: {fileID: 8300000, guid: 584d95ae75c0a1a4e86eeaff7e2f2a25, type: 3}
+  fishingPoleSFX: {fileID: 8300000, guid: f8eb5d7f3cee50b4db9fcef5e6a622c0, type: 3}
+  ringSFX: {fileID: 8300000, guid: 520fdaa4bf883244497658d7e466f150, type: 3}
+  sickleSFX: {fileID: 8300000, guid: 3501b00f7b0de8e458194b866e4a41d5, type: 3}
+  rattleSFX: {fileID: 8300000, guid: 1276c6e39b79df942819a8ecc116ed09, type: 3}
+  itemPickupSFX:
+  - {fileID: 8300000, guid: 584d95ae75c0a1a4e86eeaff7e2f2a25, type: 3}
+  - {fileID: 8300000, guid: f8eb5d7f3cee50b4db9fcef5e6a622c0, type: 3}
+  - {fileID: 8300000, guid: 1276c6e39b79df942819a8ecc116ed09, type: 3}
+  - {fileID: 8300000, guid: 520fdaa4bf883244497658d7e466f150, type: 3}
+  - {fileID: 8300000, guid: 3501b00f7b0de8e458194b866e4a41d5, type: 3}
